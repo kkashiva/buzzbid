@@ -1,7 +1,8 @@
 services:
-  webapp:
-    build:
-
+  buzzbidapp:
+    build: .
+    ports:
+      - "8082:8082"
   mysql:
     image: 'mysql:latest'
     environment:
