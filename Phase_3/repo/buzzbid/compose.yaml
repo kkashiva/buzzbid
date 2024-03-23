@@ -1,8 +1,9 @@
 services:
-  buzzbidapp:
-    build: .
-    ports:
-      - "8082:8082"
+# commenting jar creation to allow local testing
+#  buzzbidapp:
+#    build: .
+#    ports:
+#      - "8085:8082"
   mysql:
     image: 'mysql:latest'
     environment:
