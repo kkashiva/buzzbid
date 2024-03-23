@@ -20,8 +20,8 @@ public class UserRepository {
     public boolean addUser(User user){
         log.debug("Inserting user record");
        int result = jdbcTemplate.update("INSERT INTO "+table+" (user_name, password, first_name, last_name)\n" +
-                "VALUES ('?', '?', '?', '?') ",table,
-                user.getUserName(),user.getFirstName(),user.getLastName(), user.getPassword());
+                "VALUES (?, ?,?,?) ",
+                user.getUserName(), user.getPassword(),user.getFirstName(),user.getLastName());
        return result > 0;
     }
 
