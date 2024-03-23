@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BuzzbidApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(BuzzbidApplication.class, args);
 	}
 

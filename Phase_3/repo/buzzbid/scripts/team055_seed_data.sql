@@ -6,7 +6,7 @@ INSERT INTO Item (listed_by, item_name, description, returnable, category, item_
 VALUES ('jai', 'painting', null, true, 'Art', 'Poor');
 INSERT INTO Auction (item_ID, starting_bid, min_sale_price, getit_now_price, auction_length, scheduled_end_time)
 VALUES (1, 1, 0, 5, 3, now());
-Insert into ItemBid values('jai',1,2.0,now());
+-- Insert into ItemBid values('jai',1,2.0,now());
 INSERT INTO ItemBid (bid_by, item_id, bid_amount, time_of_bid)
 VALUES ('jai',1,0, CURRENT_TIMESTAMP);
 INSERT INTO ItemRating (rated_by, item_ID, stars, rating_comment, rate_date_time)

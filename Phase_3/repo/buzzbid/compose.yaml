@@ -1,4 +1,7 @@
 services:
+  webapp:
+    build:
+
   mysql:
     image: 'mysql:latest'
     environment:
