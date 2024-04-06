@@ -1,0 +1,112 @@
+.login-box {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 4px solid #2596be;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    position: relative;
+    text-align: center;
+    border-top-width: 25px; /* Increase the width of the top border */
+}
+
+.login-text {
+    position: absolute;
+    top: -22px; /* Adjust to position the text on the top border */
+    left: 0; /* Start from the left side of the border */
+    background-color: #2596be;
+    padding: 0 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    color: white;
+    font-size: 14px; /* Adjust the font size as needed */
+}
+
+.close {
+    position: absolute;
+    top: -25px; /* Adjust to position the close button on the top border */
+    right: 0; /* Adjust to position the close button on the left side */
+    cursor: pointer;
+	background-color: #808080;
+}
+
+.header {
+    background-color: #FFFFFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-image {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.register-box {
+    width: 400px; /* Adjust width to accommodate all fields in a single line */
+    margin: 0 auto;
+    padding: 20px;
+    border: 4px solid #2596be;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    position: relative;
+    text-align: center;
+    border-top-width: 25px; /* Increase the width of the top border */
+}
+.form_group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form_group label {
+    width: 150px; /* Adjust label width */
+    margin-right: 10px; /* Add spacing between label and input */
+    font-weight: bold;
+}
+
+.form_group input {
+    flex: 1; /* Take remaining space */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form_group span.error {
+    color: red;
+}
+
+/*For the main menu page*/
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-options,
+.admin-options {
+    flex: 1;
+}
+
+.menu-options {
+    text-align: left;
+}
+
+.admin-options {
+    text-align: left;
+}
+
+
+.report-box {
+    width: 800px; /* Adjust width to accommodate all fields in a single line */
+    margin: 0 auto;
+    padding: 20px;
+    border: 4px solid #2596be;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    position: relative;
+    text-align: center;
+    border-top-width: 25px; /* Increase the width of the top border */
+}

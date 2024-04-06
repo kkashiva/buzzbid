@@ -1,0 +1,63 @@
+WITH ItemFilter1(item_ID) AS
+( SELECT item_ID FROM Item WHERE
+CASE WHEN $keyword IS NOT NULL
+THEN
+description LIKE '%{ $keyword}%' OR item_name LIKE '%{$keyword}%'
+ELSE 1=1
+END),
+ItemFilter2(item_ID) AS
+(
+SELECT item_ID FROM Item WHERE
+item_ID IN (SELECT item_ID FROM ItemFilter1) AND
+CASE WHEN $category IS NOT NULL
+THEN
+category LIKE '%$category%'
+ELSE 1=1
+END
+),
+ItemFilter3(item_ID) AS
+(WITH MaxBid(item_ID,max_bid) AS
+(SELECT item_ID, MAX(bid_amount) max_bid FROM ItemBid WHERE item_ID IN (SELECT
+item_ID FROM ItemFilter2) GROUP BY item_ID)
+SELECT i.item_ID FROM Item i
+INNER JOIN Auction a ON a.item_ID = i.item_ID
+LEFT JOIN MaxBid m ON i.item_ID=m.item_ID
+WHERE i.item_ID IN (SELECT item_ID FROM ItemFilter2)
+AND COALESCE(m.max_bid, a.min_sale_price) >= COALESCE( $minprice,0)),
+ItemFilter4(item_ID) AS
+(WITH MaxBid(item_ID,max_bid) AS
+(SELECT item_ID, MAX(bid_amount) max_bid FROM ItemBid
+WHERE item_ID IN (SELECT item_ID FROM ItemFilter3) GROUP BY item_ID)
+SELECT i.item_ID FROM Item i
+INNER JOIN Auction a ON a.item_ID = i.item_ID
+LEFT JOIN MaxBid m ON i.item_ID=m.item_ID
+WHERE i.item_ID IN (SELECT item_ID FROM ItemFilter3) AND
+CASE WHEN $maxprice IS NOT NULL
+THEN
+a.min_sale_price <= $maxprice AND COALESCE(m.max_bid, a.min_sale_price) <= $maxprice
+ELSE 1=1 END),
+ItemFilter5(item_ID) AS
+(SELECT item_ID FROM Item WHERE
+item_ID IN (SELECT item_ID FROM ItemFilter4) AND
+CASE
+WHEN $itemCondition='New' THEN item_condition IN ('New') WHEN $itemCondition='Very Good'
+THEN item_condition IN ('New','Very Good')
+WHEN $itemCondition='Good' THEN item_condition IN ('New','Very Good','Good')
+WHEN $itemCondition='Fair' THEN item_condition IN ('New','Very Good','Good','Fair')
+ELSE item_condition IN ('New','Very Good','Good','Fair','Poor')
+END
+),ItemHighestBid AS
+(SELECT item_ID, max(bid_amount) max_bid FROM ItemBid WHERE
+item_ID IN (SELECT item_ID FROM ItemFilter5)
+GROUP BY item_ID ORDER BY item_ID),
+ItemFilter6(item_ID,current_bid,user_name) AS
+(SELECT ib.item_ID, ib.bid_amount current_bid, ib.bid_by user_name FROM ItemBid ib INNER JOIN
+ItemHighestBid ihb
+ON ib.item_ID=ihb.item_ID
+WHERE ib.item_ID IN (SELECT item_ID FROM ItemFilter5))
+SELECT i.item_ID, i.item_name, a.getit_now_price,a.scheduled_end_time
+auction_end_time,hb.current_bid,hb.user_name
+FROM Item i
+INNER JOIN Auction a ON a.item_ID= i.item_ID
+LEFT JOIN ItemFilter6 hb ON i.item_ID = hb.item_ID
+ORDER BY auction_end_time;
