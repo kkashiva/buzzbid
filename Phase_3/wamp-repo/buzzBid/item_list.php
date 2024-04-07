@@ -2,8 +2,9 @@
 include('lib/common.php');
 
 // initialize variables
-$itemName = $description = $category = $condition = $startBid = $minSalePrice = $auctionEnds = $getItNowPrice = '';
-$returnsAccepted = 0;
+$itemName = $description = $category = $condition = $scheduledEndTime = '';
+$startBid = $minSalePrice = $getItNowPrice = 0.00;
+$auctionEnds = $returnsAccepted = 0;
 
 // check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -28,6 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         header("Location: login.php");
         exit();
     }
+
+    // Calculate Scheduled End Time from current time and $auctionEnds
+    $scheduledEndTime = date('Y-m-d H:i:s', strtotime('+' . $auctionEnds . ' days'));
 
     // Validate form data
     $errors = array();
@@ -56,21 +60,40 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors[] = 'Auction ends in is required.';
     }
 
+    // Check if the start bid is less than the minimum sale price
+    if ($startBid >= $minSalePrice) {
+        $errors[] = 'Starting bid price must be less than the minimum sale price.';
+    }
+
+    // Check if Get It Now Price is known and the Minimum Sale Price is less than the Get It Now Price
+    if (!empty($getItNowPrice) && $minSalePrice >= $getItNowPrice) {
+        $errors[] = 'Minimum sale price must be less than the Get It Now price.';
+    }
+
     // If there are no errors, proceed with listing the item
     if (empty($errors)) {
-        // insert query to push form data into db table Item
-        $insertQuery = "INSERT INTO Item (`listed_by`, `item_name`, `description`, `returnable`, `category`, `item_condition`) 
-        VALUES ('$username', '$itemName', '$description', '$returnsAccepted', '$category', '$condition')";
+        // insert query to create record in db table Item
+        $insertItem = "INSERT INTO Item (`listed_by`, `item_name`, `description`, `returnable`, `category`, `item_condition`) VALUES ('$username', '$itemName', '$description', '$returnsAccepted', '$category', '$condition')";
         
-        // Hardcoded insert query for testing
-        // $insertQuery = "INSERT INTO Item (`listed_by`, `item_name`, `description`, `returnable`, `category`, `item_condition`) VALUES ('kktest', 'Computer', 'Macbook Air', 1, 'Electronics', 'New')";
-        
-        if(mysqli_query($db, $insertQuery)) {
-            // Insert successful
-            header('Location: main_menu.php');
-            exit;
+        if(mysqli_query($db, $insertItem)) {
+            // If insert Item successful, get the item ID of the item just listed
+            $itemID = mysqli_insert_id($db);
+
+            // insert query to create record in db table Auction
+            $insertAuction = "INSERT INTO Auction (`item_ID`, `starting_bid`, `min_sale_price`, `getit_now_price`, `auction_length`, `scheduled_end_time`) VALUES ('$itemID', '$startBid', '$minSalePrice', '$getItNowPrice', '$auctionEnds', '$scheduledEndTime')";
+
+            // Run Insert Auction query
+            if (mysqli_query($db, $insertAuction)) {
+                // Insert successful
+                array_push($query_msg, 'Item listed successfully for auction.');
+                header('Location: main_menu.php');
+                exit;
+            } else {
+                // Insert Auction failed
+                array_push($error_msg, 'Error: ' . mysqli_error($db));
+            }
         } else {
-            // Insert failed
+            // Insert Item failed
             array_push($error_msg, 'Error: ' . mysqli_error($db));
         }
         
