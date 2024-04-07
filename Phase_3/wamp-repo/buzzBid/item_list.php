@@ -3,7 +3,8 @@ include('lib/common.php');
 
 // initialize variables
 $itemName = $description = $category = $condition = $scheduledEndTime = '';
-$startBid = $minSalePrice = $getItNowPrice = 0.00;
+$startBid = $minSalePrice = 0.00;
+$getItNowPrice = NULL; // getItNowPrice is optional
 $auctionEnds = $returnsAccepted = 0;
 
 // check if form is submitted
@@ -17,6 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $minSalePrice = $_POST['minSalePrice'];
     $auctionEnds = $_POST['auctionEnds'];
     $getItNowPrice = $_POST['getItNowPrice'];
+    if ($getItNowPrice === '') {
+        $getItNowPrice = NULL;
+    }
     $returnsAccepted = isset($_POST['returnsAccepted']) ? 1 : 0;
 
     // Retrieve the username of the user listing the item from the session variable
@@ -80,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $itemID = mysqli_insert_id($db);
 
             // insert query to create record in db table Auction
-            $insertAuction = "INSERT INTO Auction (`item_ID`, `starting_bid`, `min_sale_price`, `getit_now_price`, `auction_length`, `scheduled_end_time`) VALUES ('$itemID', '$startBid', '$minSalePrice', '$getItNowPrice', '$auctionEnds', '$scheduledEndTime')";
+            $insertAuction = "INSERT INTO Auction (`item_ID`, `starting_bid`, `min_sale_price`, `getit_now_price`, `auction_length`, `scheduled_end_time`) VALUES ('$itemID', '$startBid', '$minSalePrice', " . ($getItNowPrice === NULL ? 'NULL' : "'$getItNowPrice'") . ", '$auctionEnds', '$scheduledEndTime')";
 
             // Run Insert Auction query
             if (mysqli_query($db, $insertAuction)) {

@@ -1000,3 +1000,4 @@ Stack trace:
 [07-Apr-2024 03:49:33 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
 [07-Apr-2024 03:50:16 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
 [07-Apr-2024 04:00:48 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 04:14:18 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
