@@ -34,7 +34,7 @@ $adminPosition = ''; // Fetch admin position from database or session if user is
 // Determine menu options based on user type
 $menuOptions = [
     ['label' => 'Search for Items', 'url' => 'item_search.php'],
-    ['label' => 'List Item', 'url' => 'list_item.php'],
+    ['label' => 'List Item', 'url' => 'item_list.php'],
     ['label' => 'View Auction Results', 'url' => 'view_auction_results.php']
 ];
 

@@ -990,3 +990,9 @@ Stack trace:
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 00:47:41 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 00:48:55 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 00:50:05 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 00:51:04 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 00:51:17 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 02:56:45 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41

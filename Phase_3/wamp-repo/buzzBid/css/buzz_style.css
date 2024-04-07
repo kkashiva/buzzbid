@@ -10,7 +10,7 @@
     border-top-width: 25px; /* Increase the width of the top border */
 }
 
-.login-text {
+.login-text, .item-list-text {
     position: absolute;
     top: -22px; /* Adjust to position the text on the top border */
     left: 0; /* Start from the left side of the border */
@@ -186,8 +186,65 @@
 
 }
 
-    .statistics-label {
-		font-weight: bold;
-        display: inline-block;
-        width: 200px; /* Adjust as needed for alignment */
+.statistics-label {
+    font-weight: bold;
+    display: inline-block;
+    width: 200px; /* Adjust as needed for alignment */
+}
+
+
+/* For item_list.php */
+    .item-list-box {
+        width: 400px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 4px solid #2596be;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        border-top-width: 30px; 
+    }
+
+    .form-row {
+        display: flex;
+        justify-content:flex-start!important;
+        margin-bottom: 10px;
+    }
+
+    .form-row label {
+        flex: 1;
+        margin-right: 10px;
+        text-align: left;
+    }
+
+    .form-row input,
+    .form-row select, .form-row textarea {
+        flex: 2;
+    }
+
+    #description textarea {
+        height: 3em;
+    }
+
+    .dropdown select, .dropdown label {
+        flex: none!important;
+        width: 30%;
+    }
+
+    .price input, .price label {
+        flex: none!important; 
+    }
+
+    .checkbox label, .checkbox input {
+    flex: none!important;
+    }
+
+    .form-buttons {
+        display: flex;
+        justify-content:center;
+    }
+
+    .form-button {
+        margin: 5px;
     }
