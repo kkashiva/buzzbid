@@ -36,22 +36,34 @@
             <div>Average Rating</div>
             <div><b><?php echo number_format($averageRating, 1); echo ' stars'?></b></div>
         </div>
-        <div class="ratings-block">
-            <?php
-            // get all ratings and comments for the same item_name as $itemName
-            $query = "SELECT R.rated_by, R.rate_date_time, R.stars, R.rating_comment FROM Item AS I, ItemRating AS R WHERE I.item_name = '$itemName' AND I.item_ID = R.item_ID";
-            $result = mysqli_query($db, $query);
-            // loop through the result set and display each rating and comment
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo '<div class="ratings-row">';
-                echo '<div>' . $row['stars'] . ' stars</div>';
-                echo '<div>' . $row['rating_comment'] . '</div>';
-                echo '<div>' . $row['rated_by'] . '</div>';
-                echo '<div>' . $row['rate_date_time'] . '</div>';
-                echo '</div>';
+        <?php
+        // get all ratings for the item with same item_name as $itemName
+        $query = "SELECT R.rated_by, R.rate_date_time, R.stars, R.rating_comment FROM Item AS I, ItemRating AS R WHERE I.item_name = '$itemName' AND I.item_ID = R.item_ID";
+        $result = mysqli_query($db, $query);
+        // loop through all ratings and display them
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo '<div class="ratings-block">';
+            echo '<div class="rater-date">';
+            echo '<div>';
+            echo '<div>Rated by: </div>';
+            echo '<div><b>' . $row['rated_by'] . '</b></div>';
+            echo '</div><div>';
+            echo '<div>Date: </div>';
+            echo '<div><b>' . $row['rate_date_time'] . '</b></div>';
+            echo '</div></div>';
+            echo '<div class="stars">';
+            // display empty and filled stars based on rating
+            for ($i = 0; $i < $row['stars']; $i++) {
+                echo '<span class="filled-star">&#9733;</span>'; // filled star
             }
-            ?>
-        </div>
+            for ($i = $row['stars']; $i < 5; $i++) {
+                echo '&#9734;'; // empty star
+            }
+            echo '</div>';
+            echo '<div class="comment">' . $row['rating_comment'] . '</div>';
+            echo '</div>';
+        }
+        ?>
     </div>
 </body>
 </html>

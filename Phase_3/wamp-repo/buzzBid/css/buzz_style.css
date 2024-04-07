@@ -250,25 +250,63 @@
     }
 
 /* For the ratings page */
-.ratings-box {
-    width: 600px; 
-    margin: 0 auto;
-    padding: 20px;
-    border: 4px solid #2596be;
-    border-radius: 5px;
-    background-color: #FFFFFF;
-    position: relative;
-    text-align: center;
-    border-top-width: 30px; 
-}
+    .ratings-box {
+        width: 600px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 4px solid #2596be;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        border-top-width: 30px; 
+    }
 
-.ratings-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
+    .ratings-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
 
-.ratings-row > div {
-    flex: 1;
-    text-align: left;
-}
+    .ratings-row > div {
+        flex: 1;
+        text-align: left;
+    }
+
+    .ratings-block {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+        border: 1px solid #808080;
+        padding: 10px;
+    }
+
+    .rater-date {
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        width: 50%;
+    }
+
+    .stars {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+        width: 50%;
+    }
+
+    .rater-date > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .comment {
+        width: 100%;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .filled-star {
+        color: #FFD700; 
+    }

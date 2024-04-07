@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Run Insert Auction query
             if (mysqli_query($db, $insertAuction)) {
                 // Insert successful
-                array_push($query_msg, 'Item listed successfully for auction.');
+                array_push($query_msg, 'Item listed successfully for auction.'); // need script to delay redirection and display success message
                 header('Location: main_menu.php');
                 exit;
             } else {
