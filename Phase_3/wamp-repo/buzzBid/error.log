@@ -1001,3 +1001,36 @@ Stack trace:
 [07-Apr-2024 03:50:16 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
 [07-Apr-2024 04:00:48 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
 [07-Apr-2024 04:14:18 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
+[07-Apr-2024 05:13:14 America/Los_Angeles] PHP Notice:  Undefined variable: itemID in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 19
+[07-Apr-2024 05:13:23 America/Los_Angeles] PHP Notice:  Undefined variable: itemID in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 19
+[07-Apr-2024 05:46:49 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:46:51 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:46:51 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:47:30 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
+Stack trace:
+#0 {main}
+  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
+[07-Apr-2024 05:54:06 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
+[07-Apr-2024 05:54:06 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
+[07-Apr-2024 05:54:07 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
