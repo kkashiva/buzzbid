@@ -1,6 +1,8 @@
 <?php 
 include("lib/header.php"); 
 include('lib/common.php');
+session_start();
+$_SESSION['search_cache'] = '';
 ?>
 
 <title>Item Search</title>

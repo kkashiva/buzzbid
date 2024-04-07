@@ -7,16 +7,23 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
+$fromCache = !empty($_SESSION['search_cache']);
+
 // Check if form is submitted
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
     // Sanitize input data
-    $keyword = mysqli_real_escape_string($db, $_POST['keyword']);
-    $category = mysqli_real_escape_string($db, $_POST['category']);
-    $minprice = mysqli_real_escape_string($db, $_POST['minprice']);
+    $keyword = !$fromCache ? mysqli_real_escape_string($db, $_POST['keyword']):$_SESSION['keyword'] ;
+    $_SESSION['keyword'] = $keyword;
+    $category = !$fromCache ? mysqli_real_escape_string($db, $_POST['category']):$_SESSION['category'];
+    $_SESSION['category'] = $category;
+    $minprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['minprice']):$_SESSION['minprice'];
+    $_SESSION['minprice'] = $minprice;
     if($minprice=='') $minprice = NULL;
-    $maxprice = mysqli_real_escape_string($db, $_POST['maxprice']);
+    $maxprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['maxprice']):$_SESSION['maxprice'];
+    $_SESSION['maxprice'] = $maxprice;
     if($maxprice=='') $maxprice = NULL;
-    $itemCondition = mysqli_real_escape_string($db, $_POST['itemCondition']);
+    $itemCondition = !$fromCache ? mysqli_real_escape_string($db, $_POST['itemCondition']):$_SESSION['itemCondition'];
+    $_SESSION['itemCondition'] = $itemCondition;
 
     $query = "WITH ItemFilter1(item_ID) AS
     ( SELECT item_ID FROM Item WHERE
@@ -126,11 +133,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <tr>
                             <td><?php echo $row['item_ID']; ?></td>
-                            <td><?php echo $row['item_name']; ?></td>
+                            <td>
+                                <form id="itemDescForm" action="view_item_1.php" method="get">
+                                <input type="hidden" id="itemID" name="itemID" value="<?php echo $row['item_ID']; ?>"></input>
+                                <?php echo $row['item_ID']; ?><a href=# onclick="onClickItemName()"><?php echo $row['item_name']; ?></a>
+                                </form>
+                            </td>
                             <td><?php $curBid = $row['current_bid']; 
                             $convNum = number_format(floatval($curBid), 2); // 2 dp
                             echo empty($curBid) ? '-' : '$'.$convNum ?></td>
-                            <td><?php echo $row['user_name']; ?></td>
+                            <td><?php $userName = $row['user_name'];
+                            echo empty($userName) ? '-' : $userName; ?></td>
                             <td><?php $gPrice = $row['getit_now_price']; 
                             $convNum = number_format(floatval($gPrice), 2); // 2 dp
                             echo empty($gPrice) ? '-' : '$'.$convNum ?></td>
@@ -154,6 +167,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         document.getElementById("closeButton").addEventListener("click", function() {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
+            function onClickItemName() { 
+                document.getElementById("itemDescForm").submit(); 
+            } 
     </script>
 	
 </body>

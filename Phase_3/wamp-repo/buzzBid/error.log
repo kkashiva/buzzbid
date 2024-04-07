@@ -990,47 +990,360 @@ Stack trace:
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
 [05-Apr-2024 19:49:33 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
-[07-Apr-2024 00:47:41 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 00:48:55 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 00:50:05 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 00:51:04 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 00:51:17 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 02:56:45 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 03:47:14 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 03:49:33 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 03:50:16 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 04:00:48 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 04:14:18 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
-[07-Apr-2024 05:13:14 America/Los_Angeles] PHP Notice:  Undefined variable: itemID in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 19
-[07-Apr-2024 05:13:23 America/Los_Angeles] PHP Notice:  Undefined variable: itemID in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 19
-[07-Apr-2024 05:46:49 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:46:51 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:46:51 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:46:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:47:30 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class mysqli_result could not be converted to string in /Applications/AMPPS/www/buzzBid/ratings_view.php:28
-Stack trace:
-#0 {main}
-  thrown in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 28
-[07-Apr-2024 05:54:06 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
-[07-Apr-2024 05:54:06 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
-[07-Apr-2024 05:54:07 America/Los_Angeles] PHP Warning:  Use of undefined constant Stars - assumed 'Stars' (this will throw an Error in a future version of PHP) in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 37
+[06-Apr-2024 22:31:29 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:31:29 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:31:29 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:31:29 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:31:29 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:32:51 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 22:32:51 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 22:32:51 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 165
+[06-Apr-2024 22:32:51 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 165
+[06-Apr-2024 22:32:55 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:32:55 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:32:55 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:32:55 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:32:55 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:40:53 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:40:53 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:40:53 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:40:53 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:40:53 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:46:41 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:46:41 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:46:41 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:46:41 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:46:41 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:47:34 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:47:34 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:47:34 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:47:34 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:47:34 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:52:39 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:52:39 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:52:39 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:52:39 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:52:39 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:52:43 America/Los_Angeles] PHP Notice:  Undefined index: itemID in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 14
+[06-Apr-2024 22:53:30 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:53:30 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:53:30 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:53:30 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:53:30 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:53:36 America/Los_Angeles] PHP Notice:  Undefined index: itemID in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 14
+[06-Apr-2024 22:55:17 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:55:17 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:55:17 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:55:17 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:55:17 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 22:55:22 America/Los_Angeles] PHP Notice:  Undefined variable: bidQuery in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 45
+[06-Apr-2024 22:55:22 America/Los_Angeles] PHP Warning:  mysqli_query(): Empty query in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 45
+[06-Apr-2024 22:56:10 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 22:56:10 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 22:56:10 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 22:56:10 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 22:56:10 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:09:29 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 23:09:29 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:09:29 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:09:29 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:09:29 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:09:38 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 41
+[06-Apr-2024 23:09:43 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 23:09:43 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:09:43 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:09:43 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:09:43 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:40:54 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:40:54 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:40:54 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[06-Apr-2024 23:40:54 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[06-Apr-2024 23:44:06 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 23:44:06 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:44:06 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:44:06 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:44:06 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:44:12 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:44:12 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:44:12 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[06-Apr-2024 23:44:12 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[06-Apr-2024 23:44:19 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 62
+[06-Apr-2024 23:44:19 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:44:19 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:44:19 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:44:19 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:46:10 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[06-Apr-2024 23:46:12 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 41
+[06-Apr-2024 23:46:22 America/Los_Angeles] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in C:\Program Files\Ampps\www\buzzBid\login.php on line 90
+[06-Apr-2024 23:46:28 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\login.php on line 38
+[06-Apr-2024 23:46:28 America/Los_Angeles] PHP Warning:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in C:\Program Files\Ampps\www\buzzBid\login.php on line 90
+[06-Apr-2024 23:46:29 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 41
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 63
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[06-Apr-2024 23:46:31 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[06-Apr-2024 23:46:37 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:46:37 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 114
+[06-Apr-2024 23:46:37 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[06-Apr-2024 23:46:37 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 173
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 00:07:08 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 00:07:20 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 00:07:29 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 00:07:39 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 120
+[07-Apr-2024 00:07:39 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 120
+[07-Apr-2024 00:07:39 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 179
+[07-Apr-2024 00:07:39 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 179
+[07-Apr-2024 05:40:15 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 120
+[07-Apr-2024 05:40:15 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 120
+[07-Apr-2024 05:40:15 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 179
+[07-Apr-2024 05:40:15 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 179
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:46:39 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:47:01 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:47:01 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:47:01 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:47:01 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:47:44 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:48:41 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:48:41 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:48:41 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:48:41 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:50:31 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 69
+[07-Apr-2024 05:51:38 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:51:38 America/Los_Angeles] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 122
+[07-Apr-2024 05:51:38 America/Los_Angeles] PHP Notice:  Undefined variable: result in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:51:38 America/Los_Angeles] PHP Warning:  mysqli_free_result() expects parameter 1 to be mysqli_result, null given in C:\Program Files\Ampps\www\buzzBid\item_search_results.php on line 181
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:55:33 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 69
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:56:01 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 69
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:56:17 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 69
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:56:42 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 69
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:58:05 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 05:58:17 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 06:13:49 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 172
+[07-Apr-2024 06:13:52 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 172
+[07-Apr-2024 06:13:57 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 172
+[07-Apr-2024 06:17:36 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 196
+[07-Apr-2024 06:17:36 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in C:\Program Files\Ampps\www\buzzBid\view_item.php on line 197
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 06:38:49 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 06:39:20 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 06:42:27 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 06:46:01 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 08:55:13 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:03:53 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:37 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:39 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:40 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:04:41 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:28:28 America/Los_Angeles] PHP Warning:  A non-numeric value encountered in C:\Program Files\Ampps\www\buzzBid\view_item_1.php on line 224
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:59:16 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:59:33 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 09:59:41 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:00:07 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:00:11 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:00:12 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:02:30 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:03:03 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:03:11 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:03:20 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:05:42 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[07-Apr-2024 10:09:26 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
