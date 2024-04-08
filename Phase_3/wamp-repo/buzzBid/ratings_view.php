@@ -1,7 +1,7 @@
 <?php
     include('lib/common.php');
     // Temporarily set itemID session variable to 2
-    $_SESSION['itemID'] = 2;
+   // $_SESSION['itemID'] = 2;
     // get itemID from 'view item' page TBD with Jai
     $itemID = $_SESSION['itemID'];
     // get item name from database

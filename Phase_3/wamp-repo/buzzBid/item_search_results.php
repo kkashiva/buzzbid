@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
     ON ib.item_ID=ihb.item_ID
     WHERE ib.item_ID IN (SELECT item_ID FROM ItemFilter5))
     SELECT i.item_ID, i.item_name, a.getit_now_price,a.scheduled_end_time
-    auction_end_time,hb.current_bid,hb.user_name
+    auction_end_time,hb.current_bid,hb.user_name,a.actual_end_time
     FROM Item i
     INNER JOIN Auction a ON a.item_ID= i.item_ID
     INNER JOIN ItemFilter5 i5 ON
@@ -134,9 +134,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
                         <tr>
                             <td><?php echo $row['item_ID']; ?></td>
                             <td>
-                                <form id="itemDescForm" action="view_item_1.php" method="get">
-                                <input type="hidden" id="itemID" name="itemID" value="<?php echo $row['item_ID']; ?>"></input>
-                                <?php echo $row['item_ID']; ?><a href=# onclick="onClickItemName()"><?php echo $row['item_name']; ?></a>
+                                <?php 
+                                $actual_end_time = $row['actual_end_time'];
+                                $nextPage = empty($actual_end_time) ? "view_item.php":"item_results.php";                                
+                                ?>
+                                <form id="itemDescForm" action=<?php echo $nextPage;?> method="get">
+                                <input type="hidden" id="itemID" name="itemID" value=<?php echo $row['item_ID']; ?>></input>
+                                <a href=# onclick="onClickItemName()"><?php echo $row['item_name']; ?></a>
                                 </form>
                             </td>
                             <td><?php $curBid = $row['current_bid']; 
@@ -168,6 +172,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
             function onClickItemName() { 
+                id =document.getElementById("itemID").value;
+                alert("item id: "+id);
                 document.getElementById("itemDescForm").submit(); 
             } 
     </script>

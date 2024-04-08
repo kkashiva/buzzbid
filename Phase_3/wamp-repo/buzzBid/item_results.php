@@ -7,7 +7,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-
+//TODO: calculate item results
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // Sanitize input data
@@ -18,15 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     $query =
-        "WITH ItemHighestBid AS
-        (SELECT item_ID, max(bid_amount) max_bid FROM ItemBid WHERE
-        item_ID = $itemID
-        GROUP BY item_ID)
-        SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price, b.max_bid,i.listed_by,
-        coalesce(a.actual_end_time,a.scheduled_end_time) auction_end_time, a.min_sale_price
+        "SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price,i.listed_by,
+        a.actual_end_time auction_end_time, a.sale_price, a.winner,a.canceled_time, 'ADMINISTRATOR' as canceled_by, cancelation_reason
         FROM Item i
         INNER JOIN Auction a ON i.item_ID = a.item_ID
-        LEFT JOIN ItemHighestBid b ON i.item_ID = b.item_ID
         WHERE i.item_ID = $itemID";
 
     // echo $query;
@@ -111,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>
                                             <?php echo $row['item_ID']; ?>
                                         </label></td>
-                                    <td></td>
+                                    <td><a href="ratings_view.php">View Ratings</a></td>
                                 </tr>
                                 <tr>
                                     <td> <label>Item Name</label></td>
@@ -125,16 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><textarea id="description" name="description" rows="4" cols="30" readonly
                                             style="resize: none;text-align:left; overflow:auto; border:0px outset #000000;">
                                                 <?php echo $row['description']; ?></textarea></td>
-                                    <td>
-                                        <?php
-                                        $listedBy = $row['listed_by'];
-                                        if ($_SESSION['username'] == $listedBy) {
-                                            ?>
-                                            <a href="edit_desciption.php">Edit Description </a>
-                                            <?php
-                                        }
-                                        ?>
-                                    </td>
+                                    <td> </td>
                                 </tr>
                                 <tr>
                                     <td><label>Category</label>
@@ -170,18 +156,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             $minSalePrice = $row['min_sale_price'];
                                             ?>
                                         </label></td>
-                                    <td>
-                                        <?php if (!empty($getit_now_price)) { ?>
-                                            <input type="button" value="Get it Now!"
-                                                onclick="window.location.href='getit_now.php'"></input>
-                                        <?php } ?>
-                                    </td>
+                                    <td></td>
                                 </tr>
                                 <tr>
-                                    <td><label>Auction Ends:</label></td>
+                                    <td><label>Auction Ended:</label></td>
                                     <td><label>
                                             <?php $date = $row['auction_end_time'];
-                                            $newDate = date("Y/m/d H:iA", strtotime($date));
+                                            $newDate = date("m/d/Y H:iA", strtotime($date));
                                             echo $newDate ?>
                                         </label></td>
                                     <td></td>
@@ -190,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             </table>
 
                             <table id="bids_table" style="border=1px;">
-                                <caption><b><u>Latest Bids</u><b></caption>
+                                <caption><b><u>Bid History</u><b></caption>
                                 <td>
                                     <tr>
                                         <th>Bid Amount</th>
@@ -217,35 +198,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 </td>
                             </table>
 
-
-                            <table id="desc_table">
-                                <tr>
-                                    <td> <label for="new_bid">Your bid</label></td>
-                                    <td>$<input type="text" id="new_bid" onblur="validateBid(<?php echo $getit_now_price?>,
-                                <?php echo $minSalePrice?>,<?php echo $maxBid?>)"></input></td>
-                                    <td>(minimum bid <?php 
-                                    $new_bid_inc = empty($maxBid) ? $minSalePrice : $maxBid+1.00;
-                                    $convNum = number_format(floatval($new_bid_inc), 2);
-                                    echo '$'.$convNum?>)</td>
-                                </tr>
-                                <tr><td></td><td><label id="bid_err_msg"></label></td></tr>
-                            </table>
                         <?php } ?>
                         <div class="form_group">
                             <?php $_SESSION['search_cache'] = true; ?>
                             <input type="button" value="Close"
                                 onclick="window.location.href='item_search_results.php'" />
-                            <?php if ($isAdminUser) {
-                                ?>
-                                <input type="button" value="Cancel This Item"
-                                    onclick="window.location.href='cancel_item.php'" />
-                            <? } ?>
-                            <?php
-                            if ($_SESSION['username'] != $listedBy) {
-                                ?>
-                                <input id ="bid_btn" type="button" value="Bid On This Item"
-                                    onclick="window.location.href='item_bid.php'" disabled=true />
-                            <?php } ?>
                         </div>
                 </div>
             </div>
@@ -256,25 +213,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         document.getElementById("closeButton").addEventListener("click", function () {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
-        
-        function validateBid(getit_now_price, minSalePrice, maxBid){
-            curBid =parseFloat(document.getElementById("new_bid").value);
-            if(!isNaN(curBid)){
-                min_new_bid = (isNaN(maxBid) ? minSalePrice : maxBid)+1.00;
-                if(curBid >= getit_now_price){
-                    document.getElementById("bid_err_msg").innerHTML = "Use Get it Now button for purchase ";
-                    document.getElementById("bid_btn").disabled = true;
-                }
-                else if(curBid < min_new_bid){
-                    document.getElementById("bid_err_msg").innerHTML = "Your bid is less than minimum bid value. ";
-                    document.getElementById("bid_btn").disabled = true;
-                }
-                else{
-                    document.getElementById("bid_err_msg").innerHTML = "";
-                    document.getElementById("bid_btn").disabled = false;
-                }
-            }
-        }
     </script>
 
 </body>
