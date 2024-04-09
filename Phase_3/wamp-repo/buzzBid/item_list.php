@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <h1></h1>
     </div>
 	<div class="item-list-box">
-    <span class="close">&#10006;</span> <!-- Close symbol -->
+    <span class="close" onclick="window.location.href='main_menu.php'">&#10006;</span> <!-- Close symbol -->
 
     <div class="item-list-text">New Item for Auction</div> 
 
@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="form-buttons">    
                 <div class="form-button">
-                    <input type="button" value="Cancel" onclick="history.back()">
+                    <input type="button" value="Cancel" onclick="window.location.href='main_menu.php'">
                 </div>
                 <div class="form-button">
                     <input type="submit" value="List my Item">

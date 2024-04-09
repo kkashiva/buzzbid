@@ -310,3 +310,8 @@
     .filled-star {
         color: #FFD700; 
     }
+
+    .delete {
+        color: blue;
+        cursor: pointer;
+    }
