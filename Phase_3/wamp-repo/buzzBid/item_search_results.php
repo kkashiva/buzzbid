@@ -1,5 +1,5 @@
 <?php
-include('lib/common.php');
+include ('lib/common.php');
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
@@ -12,17 +12,19 @@ $fromCache = !empty($_SESSION['search_cache']);
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
     // Sanitize input data
-    $keyword = !$fromCache ? mysqli_real_escape_string($db, $_POST['keyword']):$_SESSION['keyword'] ;
+    $keyword = !$fromCache ? mysqli_real_escape_string($db, $_POST['keyword']) : $_SESSION['keyword'];
     $_SESSION['keyword'] = $keyword;
-    $category = !$fromCache ? mysqli_real_escape_string($db, $_POST['category']):$_SESSION['category'];
+    $category = !$fromCache ? mysqli_real_escape_string($db, $_POST['category']) : $_SESSION['category'];
     $_SESSION['category'] = $category;
-    $minprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['minprice']):$_SESSION['minprice'];
+    $minprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['minprice']) : $_SESSION['minprice'];
     $_SESSION['minprice'] = $minprice;
-    if($minprice=='') $minprice = NULL;
-    $maxprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['maxprice']):$_SESSION['maxprice'];
+    if ($minprice == '')
+        $minprice = NULL;
+    $maxprice = !$fromCache ? mysqli_real_escape_string($db, $_POST['maxprice']) : $_SESSION['maxprice'];
     $_SESSION['maxprice'] = $maxprice;
-    if($maxprice=='') $maxprice = NULL;
-    $itemCondition = !$fromCache ? mysqli_real_escape_string($db, $_POST['itemCondition']):$_SESSION['itemCondition'];
+    if ($maxprice == '')
+        $maxprice = NULL;
+    $itemCondition = !$fromCache ? mysqli_real_escape_string($db, $_POST['itemCondition']) : $_SESSION['itemCondition'];
     $_SESSION['itemCondition'] = $itemCondition;
 
     $query = "WITH ItemFilter1(item_ID) AS
@@ -108,14 +110,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
 }
 ?>
 
-<?php include("lib/header.php"); ?>
+<?php include ("lib/header.php"); ?>
 <title>Search Results</title>
 </head>
+
 <body>
     <div class="category-report-box">
         <span class="close" id="closeButton">&#10006;</span> <!-- Close symbol -->
         <div class="login-text">Search Results</div>
-        
+
         <!-- Display table result -->
         <div>
             <?php if (mysqli_num_rows($result) == 0) {
@@ -132,53 +135,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                         <tr>
-                            <td><?php echo $row['item_ID']; ?></td>
                             <td>
-                                <?php 
-                                $actual_end_time = $row['actual_end_time'];
-                                $nextPage = empty($actual_end_time) ? "view_item.php":"item_results.php";                                
-                                ?>
-                                <form id="itemDescForm" action=<?php echo $nextPage;?> method="get">
-                                <input type="hidden" id="itemID" name="itemID" value=<?php echo $row['item_ID']; ?>></input>
-                                <a href=# onclick="onClickItemName()"><?php echo $row['item_name']; ?></a>
-                                </form>
+                                <?php echo $row['item_ID']; ?>
                             </td>
-                            <td><?php $curBid = $row['current_bid']; 
-                            $convNum = number_format(floatval($curBid), 2); // 2 dp
-                            echo empty($curBid) ? '-' : '$'.$convNum ?></td>
-                            <td><?php $userName = $row['user_name'];
-                            echo empty($userName) ? '-' : $userName; ?></td>
-                            <td><?php $gPrice = $row['getit_now_price']; 
-                            $convNum = number_format(floatval($gPrice), 2); // 2 dp
-                            echo empty($gPrice) ? '-' : '$'.$convNum ?></td>
-                            <td><?php $date = $row['auction_end_time']; 
-                            $newDate = date("Y/m/d H:iA", strtotime($date));
-                            echo $newDate ?></td>
+                            <td>
+                                <?php
+                                $actual_end_time = $row['actual_end_time'];
+                                $nextPage = empty($actual_end_time) ? "view_item.php" : "item_results.php";
+                                $nextPage = $nextPage . "?itemID=" . $row['item_ID'];
+                                ?>
+                                <a href=<?php echo $nextPage; ?>><?php echo $row['item_name']; ?></a>
+                            </td>
+                            <td>
+                                <?php $curBid = $row['current_bid'];
+                                $convNum = number_format(floatval($curBid), 2); // 2 dp
+                                echo empty($curBid) ? '-' : '$' . $convNum ?>
+                            </td>
+                            <td>
+                                <?php $userName = $row['user_name'];
+                                echo empty($userName) ? '-' : $userName; ?>
+                            </td>
+                            <td>
+                                <?php $gPrice = $row['getit_now_price'];
+                                $convNum = number_format(floatval($gPrice), 2); // 2 dp
+                                echo empty($gPrice) ? '-' : '$' . $convNum ?>
+                            </td>
+                            <td>
+                                <?php $date = $row['auction_end_time'];
+                                $newDate = date("Y/m/d H:iA", strtotime($date));
+                                echo $newDate ?>
+                            </td>
                         </tr>
                     <?php } ?>
                     <tr>
                         <td>
-                            <input type="button" value="Back to Search" onclick="window.location.href='item_search.php'"/>
+                            <input type="button" value="Back to Search" onclick="window.location.href='item_search.php'" />
                         </td>
                     </tr>
                 </table>
             <?php } ?>
         </div>
     </div>
-	
-	<script>
+
+    <script>
         // JavaScript to handle the close button click
-        document.getElementById("closeButton").addEventListener("click", function() {
+        document.getElementById("closeButton").addEventListener("click", function () {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
-            function onClickItemName() { 
-                id =document.getElementById("itemID").value;
-                alert("item id: "+id);
-                document.getElementById("itemDescForm").submit(); 
-            } 
     </script>
-	
+
 </body>
+
 </html>
 
 <?php

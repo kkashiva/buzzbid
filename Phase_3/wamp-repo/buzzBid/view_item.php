@@ -7,9 +7,10 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-
+// echo"view out";
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    // echo "here : ".$_GET['itemID'];
     // Sanitize input data
     $itemID = mysqli_real_escape_string($db, $_GET['itemID']);
 
@@ -23,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         item_ID = $itemID
         GROUP BY item_ID)
         SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price, b.max_bid,i.listed_by,
-        a.scheduled_end_time auction_end_time, a.min_sale_price
+        coalesce(a.actual_end_time,a.scheduled_end_time) auction_end_time, a.min_sale_price
         FROM Item i
         INNER JOIN Auction a ON i.item_ID = a.item_ID
         LEFT JOIN ItemHighestBid b ON i.item_ID = b.item_ID
@@ -69,12 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     #desc_table tr td:nth-child(3) {
         width: 200px;
         text-align: left;
-    }
-
-    #bids_table tr td {
-        width: 800px;
-        text-align: left;
-        left: 200px;
     }
 </style>
 </head>
@@ -122,15 +117,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 </tr>
                                 <tr>
                                     <td><label>Description</label></td>
-                                    <td><textarea id="description" name="description" rows="4" cols="30" readonly
-                                            style="resize: none;text-align:left; overflow:auto; border:0px outset #000000;">
-                                                <?php echo $row['description']; ?></textarea></td>
+                                    <td><input type ="text" id="item_desc" name="description" value="<?php echo $row['description']; ?>"
+                                            style="resize: none;text-align:left; overflow:auto; border:0px outset #000000;" readonly>
+                        </input></td>
                                     <td>
                                         <?php
                                         $listedBy = $row['listed_by'];
                                         if ($_SESSION['username'] == $listedBy) {
                                             ?>
-                                            <a href="edit_desciption.php">Edit Description </a>
+                                            <div id="saveDescDiv">
+                                            <a id="save_item_desc" href="#" onclick="saveDesc()">Save Description</a>
+                                            </div>
+                                            <div id="editDescDiv">                                            
+                                            <a id="edit_item_desc" href="#" onclick="editDesc()" >Edit Description</a>
+                                            </div>
                                             <?php
                                         }
                                         ?>
@@ -164,7 +164,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>
                                             <?php $getit_now_price = $row['getit_now_price'];
                                             $convNum = number_format(floatval($getit_now_price), 2); // 2 dp
-                                            echo empty($getit_now_price) ? '-' : '$' . $convNum ;
+                                            echo empty($getit_now_price) ? '-' : '$' . $convNum;
                                             //for future use
                                             $maxBid = $row['max_bid'];
                                             $minSalePrice = $row['min_sale_price'];
@@ -221,14 +221,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <table id="desc_table">
                                 <tr>
                                     <td> <label for="new_bid">Your bid</label></td>
-                                    <td>$<input type="text" id="new_bid" onblur="validateBid(<?php echo $getit_now_price?>,
-                                <?php echo $minSalePrice?>,<?php echo $maxBid?>)"></input></td>
-                                    <td>(minimum bid <?php 
-                                    $new_bid_inc = empty($maxBid) ? $minSalePrice : $maxBid+1.00;
-                                    $convNum = number_format(floatval($new_bid_inc), 2);
-                                    echo '$'.$convNum?>)</td>
+                                    <td>$<input type="text" id="new_bid" onblur="validateBid(<?php echo $getit_now_price ?>,
+                                <?php echo $minSalePrice ?>,<?php echo $maxBid ?>)"></input></td>
+                                    <td>(minimum bid
+                                        <?php
+                                        $new_bid_inc = empty($maxBid) ? $minSalePrice : $maxBid + 1.00;
+                                        $convNum = number_format(floatval($new_bid_inc), 2);
+                                        echo '$' . $convNum ?>)
+                                    </td>
                                 </tr>
-                                <tr><td></td><td><label id="bid_err_msg"></label></td></tr>
+                                <tr>
+                                    <td></td>
+                                    <td><label id="bid_err_msg"></label></td>
+                                </tr>
                             </table>
                         <?php } ?>
                         <div class="form_group">
@@ -243,7 +248,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <?php
                             if ($_SESSION['username'] != $listedBy) {
                                 ?>
-                                <input id ="bid_btn" type="button" value="Bid On This Item"
+                                <input id="bid_btn" type="button" value="Bid On This Item"
                                     onclick="window.location.href='item_bid.php'" disabled=true />
                             <?php } ?>
                         </div>
@@ -252,24 +257,57 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         </div>
     </div>
     <script>
+        window.onload = function() {
+            var saveDiv=document.getElementById("saveDescDiv");
+            saveDiv.style.display = 'none';
+        };
         // JavaScript to handle the close button click
         document.getElementById("closeButton").addEventListener("click", function () {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
+    
+        document.getElementById("edit_item_desc").addEventListener("click", function () {
+            alert('can edit');
+            document.getElementById('item_desc').removeAttribute('readonly');
+        });
 
-        function validateBid(getit_now_price, minSalePrice, maxBid){
-            curBid =parseFloat(document.getElementById("new_bid").value);
-            if(!isNaN(curBid)){
-                min_new_bid = (isNaN(maxBid) ? minSalePrice : maxBid)+1.00;
-                if(curBid >= getit_now_price){
+        document.getElementById("save_item_desc").addEventListener("click", function () {
+            alert('disable edit');
+            document.getElementById('item_desc').setAttribute('readonly', 'readonly');
+        });
+        
+        function editDesc(){
+            //alert("edit desc");
+            var editDiv =document.getElementById("editDescDiv");
+            var saveDiv=document.getElementById("saveDescDiv");
+
+            saveDiv.style.display = "block";
+            editDiv.style.display = "none";            
+        }
+
+        function saveDesc(){
+            //alert("save desc");
+            var editDiv =document.getElementById("editDescDiv");
+            var saveDiv=document.getElementById("saveDescDiv");
+
+            saveDiv.style.display = "none";
+            editDiv.style.display = "block";            
+        }
+
+
+        function validateBid(getit_now_price, minSalePrice, maxBid) {
+            curBid = parseFloat(document.getElementById("new_bid").value);
+            if (!isNaN(curBid)) {
+                min_new_bid = (isNaN(maxBid) ? minSalePrice : maxBid) + 1.00;
+                if (curBid >= getit_now_price) {
                     document.getElementById("bid_err_msg").innerHTML = "Use Get it Now button for purchase ";
                     document.getElementById("bid_btn").disabled = true;
                 }
-                else if(curBid < min_new_bid){
+                else if (curBid < min_new_bid) {
                     document.getElementById("bid_err_msg").innerHTML = "Your bid is less than minimum bid value. ";
                     document.getElementById("bid_btn").disabled = true;
                 }
-                else{
+                else {
                     document.getElementById("bid_err_msg").innerHTML = "";
                     document.getElementById("bid_btn").disabled = false;
                 }
