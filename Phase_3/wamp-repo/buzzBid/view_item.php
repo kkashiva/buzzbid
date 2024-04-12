@@ -105,7 +105,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>Item ID</label></td>
                                     <td><label>
                                             <?php echo $row['item_ID']; ?>
-                                        </label></td>
+                                        </label>
+                                    <input type="hidden" id="item_ID" value=<?php echo $row['item_ID']; ?>></input>
+                                    </td>
                                     <td><a href="ratings_view.php">View Ratings</a></td>
                                 </tr>
                                 <tr>
@@ -126,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                         if ($_SESSION['username'] == $listedBy) {
                                             ?>
                                             <div id="saveDescDiv">
-                                            <a id="save_item_desc" href="#" onclick="saveDesc()">Save Description</a>
+                                            <a id="save_item_desc" href="#">Save Description</a>
                                             </div>
                                             <div id="editDescDiv">                                            
                                             <a id="edit_item_desc" href="#" onclick="editDesc()" >Edit Description</a>
@@ -267,13 +269,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         });
     
         document.getElementById("edit_item_desc").addEventListener("click", function () {
-            alert('can edit');
+            //alert('can edit');
             document.getElementById('item_desc').removeAttribute('readonly');
         });
 
         document.getElementById("save_item_desc").addEventListener("click", function () {
-            alert('disable edit');
             document.getElementById('item_desc').setAttribute('readonly', 'readonly');
+            var id=document.getElementById("item_ID").value;
+            var desc=document.getElementById("item_desc").value;
+            var url = 'update_description.php?itemID='+id+'&itemDesc='+desc;
+            document.location.href = url;   
         });
         
         function editDesc(){
@@ -284,16 +289,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             saveDiv.style.display = "block";
             editDiv.style.display = "none";            
         }
-
-        function saveDesc(){
-            //alert("save desc");
-            var editDiv =document.getElementById("editDescDiv");
-            var saveDiv=document.getElementById("saveDescDiv");
-
-            saveDiv.style.display = "none";
-            editDiv.style.display = "block";            
-        }
-
 
         function validateBid(getit_now_price, minSalePrice, maxBid) {
             curBid = parseFloat(document.getElementById("new_bid").value);
