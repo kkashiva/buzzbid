@@ -90,10 +90,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (mysqli_query($db, $insertAuction)) {
                 // Insert successful
                 array_push($query_msg, 'Item listed successfully for auction.'); // need script to delay redirection and display success message
-                // Show message to user "Item listed successfully for auction." before redirecting
+                // Print message to user "Item listed successfully for auction." before redirecting
                 echo '<p>Item listed successfully for auction.</p>';
-                // Redirect to main menu
-                header('Location: main_menu.php');
+                // Redirect to main menu after 2 seconds
+                echo '<script>setTimeout(function(){ window.location.href = "main_menu.php"; }, 2000);</script>';
                 exit;
             } else {
                 // Insert Auction failed

@@ -26,6 +26,12 @@
     $isWinner = mysqli_num_rows($result) > 0;
     // log isWinner to console for debug
     echo "<script>console.log('isWinner: $isWinner');</script>";
+    // check if itemID has already been rated
+    $query = "SELECT item_ID FROM ItemRating WHERE item_ID = '$itemID'";
+    $result = mysqli_query($db, $query);
+    $isRated = mysqli_num_rows($result) > 0;
+    // log isRated to console for debug
+    echo "<script>console.log('isRated: $isRated');</script>";
 ?>
 
 <?php include("lib/header.php"); ?>
@@ -85,7 +91,7 @@
             echo '<div class="comment">' . $row['rating_comment'] . '</div>';
             echo '</div>';
         }
-        if ($isWinner) { // Submit rating form displayed only if user is the auction winner
+        if ($isWinner && !$isRated) { // Submit rating form displayed only if user is the auction winner and item is not already rated
             echo '<div class="ratings-submit">';
             echo '<form method="POST" action="ratings_submit.php">';
             echo '<input type="hidden" name="item_ID" value="' . $itemID . '">';
