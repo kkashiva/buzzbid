@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         "UPDATE Item SET description='$description'
         WHERE item_ID = $itemID";
 
-    echo $query;
+    //echo $query;
 
     $result = mysqli_query($db, $query);
 

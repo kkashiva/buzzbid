@@ -1342,3 +1342,203 @@ Stack trace:
 [09-Apr-2024 12:56:13 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 41
 [09-Apr-2024 13:33:37 America/Los_Angeles] PHP Notice:  Undefined index: itemID in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 4
 [09-Apr-2024 13:33:37 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/ratings_view.php on line 8
+[12-Apr-2024 09:40:05 America/Los_Angeles] PHP Notice:  Undefined variable: item_ID in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 61
+[12-Apr-2024 09:40:21 America/Los_Angeles] PHP Notice:  Undefined variable: item_ID in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 61
+[12-Apr-2024 09:40:38 America/Los_Angeles] PHP Notice:  Undefined variable: item_ID in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 61
+[12-Apr-2024 09:41:56 America/Los_Angeles] PHP Notice:  Undefined variable: item_ID in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 63
+[12-Apr-2024 09:43:01 America/Los_Angeles] PHP Notice:  Undefined variable: item_ID in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 63
+[12-Apr-2024 09:44:03 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 78
+[12-Apr-2024 09:44:07 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 78
+[12-Apr-2024 09:44:31 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 78
+[12-Apr-2024 09:45:20 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 79
+[12-Apr-2024 09:46:17 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 75
+[12-Apr-2024 09:47:30 America/Los_Angeles] PHP Notice:  Undefined index: caller in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 74
+[12-Apr-2024 09:55:16 America/Los_Angeles] PHP Notice:  Undefined index: lastResultTime in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 9
+[12-Apr-2024 09:55:16 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:16 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:44 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:44 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:55 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:55 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[12-Apr-2024 09:55:59 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[12-Apr-2024 09:56:03 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:56:03 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:56:55 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:56:55 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[12-Apr-2024 09:57:00 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[12-Apr-2024 09:57:45 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:57:45 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:57:51 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:57:51 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:57:56 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:57:56 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:58:04 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:58:04 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:58:08 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:58:08 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 09:58:11 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 09:58:11 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:37:13 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:37:13 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[12-Apr-2024 19:38:15 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[12-Apr-2024 19:38:24 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:38:24 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:38:43 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:38:43 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:39:30 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:39:30 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[12-Apr-2024 19:39:37 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[12-Apr-2024 19:39:43 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:39:43 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:39:47 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:39:47 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:40:32 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:40:32 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:42:39 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:42:39 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  session_start(): A session had already been started - ignoring in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 4
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  Undefined variable: firstNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 64
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  Undefined variable: lastNameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 65
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  Undefined variable: usernameError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 66
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  Undefined variable: passwordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 67
+[12-Apr-2024 19:44:40 America/Los_Angeles] PHP Notice:  Undefined variable: confirmPasswordError in C:\Program Files\Ampps\www\buzzBid\item_search.php on line 68
+[12-Apr-2024 19:44:45 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 19:44:45 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 19:45:18 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:45:18 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:45:26 America/Los_Angeles] PHP Notice:  Undefined variable: date1 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 19:45:26 America/Los_Angeles] PHP Notice:  Undefined variable: date2 in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 20:08:37 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 20:08:37 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 20:08:55 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 20:08:55 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 20:09:05 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 20:09:05 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 20:11:31 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 167
+[12-Apr-2024 20:11:31 America/Los_Angeles] PHP Notice:  Undefined index: min_sale_price in C:\Program Files\Ampps\www\buzzBid\item_auction_results.php on line 168
+[12-Apr-2024 23:04:37 America/Los_Angeles] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:11:28 America/Los_Angeles] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:26:27 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:28:20 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:29:08 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:29:09 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[12-Apr-2024 23:35:38 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:12
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 12
+[12-Apr-2024 23:35:54 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:12
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 12
+[12-Apr-2024 23:37:35 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:15
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 15
+[13-Apr-2024 03:32:05 America/Los_Angeles] PHP Notice:  Undefined variable: currentTime in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 22
+[13-Apr-2024 03:32:52 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Object of class DateTime could not be converted to string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 24
+[13-Apr-2024 03:34:51 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:34:53 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:35:04 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:35:05 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:35:20 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:35:21 America/Los_Angeles] PHP Fatal error:  Uncaught Error: Call to a member function format() on string in C:\Program Files\Ampps\www\buzzBid\main_menu.php:11
+Stack trace:
+#0 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\main_menu.php on line 11
+[13-Apr-2024 03:44:07 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\calc_winners.php:12
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\calc_winners.php(12): DateTime->__construct()
+#1 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\calc_winners.php on line 12
+[13-Apr-2024 03:57:55 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 03:58:01 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 03:59:33 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 03:59:41 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 03:59:42 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 04:00:07 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6
+[13-Apr-2024 04:00:33 America/Los_Angeles] PHP Fatal error:  Uncaught TypeError: DateTime::__construct() expects parameter 1 to be string, object given in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php:6
+Stack trace:
+#0 C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php(6): DateTime->__construct()
+#1 C:\Program Files\Ampps\www\buzzBid\main_menu.php(11): calc_auction_winners()
+#2 {main}
+  thrown in C:\Program Files\Ampps\www\buzzBid\lib\calc_winner_lib.php on line 6

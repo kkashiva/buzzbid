@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
                             <td>
                                 <?php
                                 $actual_end_time = $row['actual_end_time'];
-                                $nextPage = empty($actual_end_time) ? "view_item.php" : "item_results.php";
+                                $nextPage = empty($actual_end_time) ? "view_item.php" : "item_auction_results.php";
                                 $nextPage = $nextPage . "?itemID=" . $row['item_ID'];
                                 ?>
                                 <a href=<?php echo $nextPage; ?>><?php echo $row['item_name']; ?></a>

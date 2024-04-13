@@ -7,6 +7,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
+
 //TODO: calculate item results
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -16,6 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (empty($itemID)) {
         echo "No data found.";
     }
+    // $_SESSION['caller'] = 'item_auction_results.php'. "?itemID=" . $itemID;
+    // header("Location: calc_winners.php");
 
     $query =
         "SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price,i.listed_by,
@@ -70,6 +73,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         width: 800px;
         text-align: left;
         left: 200px;
+    }
+    #winner_bid tr td:nth-child(1) {
+        background-color: green;
+    }
+    #no_winner tr td:nth-child(1) {
+        background-color: yellow;
+    }
+    #cancel_bid tr td:nth-child(1) {
+        background-color: red;
     }
 </style>
 </head>
@@ -178,20 +190,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                         <th>Time of Bid</th>
                                         <th>Username</th>
                                     </tr>
-                                    <?php while ($row = mysqli_fetch_assoc($bidResult)) { ?>
+                                    
+                                    <?php 
+                                    $canceled_time = $row['canceled_time'];
+                                    if(!empty($canceled_time)){
+                                        ?>
+                                        <tr>
+                                            <td>Cancelled</td>
+                                            <td>
+                                            <?php 
+                                            $newDate = date("Y/m/d H:iA", strtotime($canceled_time));
+                                            echo $newDate ?>    </td>
+                                            <td>Administrator</td>
+                                        </tr>
+                                        
+                                        <?php
+                                        
+                                    }
+                                    
+                                    
+                                    while ($bidRow = mysqli_fetch_assoc($bidResult)) { ?>
                                         <tr>
                                             <td>
-                                                <?php $bid_amount = $row['bid_amount'];
+                                                <?php $bid_amount = $bidRow['bid_amount'];
                                                 $convNum = number_format(floatval($bid_amount), 2); // 2 dp
                                                 echo empty($bid_amount) ? '-' : '$' . $convNum ?>
                                             </td>
                                             <td>
-                                                <?php $date = $row['time_of_bid'];
+                                                <?php $date = $bidRow['time_of_bid'];
                                                 $newDate = date("Y/m/d H:iA", strtotime($date));
                                                 echo $newDate ?>
                                             </td>
                                             <td>
-                                                <?php echo $row['bid_by']; ?>
+                                                <?php echo $bidRow['bid_by']; ?>
                                             </td>
                                         </tr>
                                     <?php } ?>
