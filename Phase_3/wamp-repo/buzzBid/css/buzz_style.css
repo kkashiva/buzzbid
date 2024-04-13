@@ -315,3 +315,7 @@
         color: blue;
         cursor: pointer;
     }
+
+    #rating_comment textarea {
+        height: 4em;
+    }
