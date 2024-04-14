@@ -68,21 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         width: 200px;
         text-align: left;
     }
-
-    #bids_table tr td {
-        width: 800px;
-        text-align: left;
-        left: 200px;
-    }
-    #winner_bid tr td:nth-child(1) {
-        background-color: green;
-    }
-    #no_winner tr td:nth-child(1) {
-        background-color: yellow;
-    }
-    #cancel_bid tr td:nth-child(1) {
-        background-color: red;
-    }
 </style>
 </head>
 
@@ -131,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>Description</label></td>
                                     <td><textarea id="description" name="description" rows="4" cols="30" readonly
                                             style="resize: none;text-align:left; overflow:auto; border:0px outset #000000;">
-                                                <?php echo $row['description']; ?></textarea></td>
+                                                    <?php echo $row['description']; ?></textarea></td>
                                     <td> </td>
                                 </tr>
                                 <tr>
@@ -162,7 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>
                                             <?php $getit_now_price = $row['getit_now_price'];
                                             $convNum = number_format(floatval($getit_now_price), 2); // 2 dp
-                                            echo empty($getit_now_price) ? '-' : '$' . $convNum ;
+                                            echo empty($getit_now_price) ? '-' : '$' . $convNum;
                                             //for future use
                                             $maxBid = $row['max_bid'];
                                             $minSalePrice = $row['min_sale_price'];
@@ -173,42 +158,69 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 <tr>
                                     <td><label>Auction Ended:</label></td>
                                     <td><label>
-                                            <?php $date = $row['auction_end_time'];
-                                            $newDate = date("m/d/Y H:iA", strtotime($date));
+                                            <?php $auction_end_time = $row['auction_end_time'];
+                                            $newDate = date("m/d/Y H:iA", strtotime($auction_end_time));
                                             echo $newDate ?>
                                         </label></td>
                                     <td></td>
                                 </tr>
                                 <tr></tr>
                             </table>
+                            <?php
+                            //decide bg color of first row
+                            $bgcolor = "white";
+                            if (!empty($auction_end_time)) {
+                                if (!empty($row['canceled_time'])) {
+                                    $bgcolor = '#FFCCCB'; //light red
+                                } else if (empty($row['winner'])) {
+                                    $bgcolor = '#FFFFE0'; // light yellow
+                                } else {
+                                    $bgcolor = '#90EE90'; //light green
+                                }
+                            }
 
+                            ?>
+                            <style>
+                                #bids_table tr td {
+                                    width: 800px;
+                                    text-align: left;
+                                    left: 200px;
+                                }
+
+                                #bids_table tbody tr:first-child td {
+                                    background:
+                                        <?php echo $bgcolor; ?>
+                                    ;
+                                }
+                            </style>
                             <table id="bids_table" style="border=1px;">
                                 <caption><b><u>Bid History</u><b></caption>
-                                <td>
+                                <thead>
                                     <tr>
                                         <th>Bid Amount</th>
                                         <th>Time of Bid</th>
                                         <th>Username</th>
                                     </tr>
-                                    
-                                    <?php 
+                                </thead>
+                                <tbody>
+                                    <?php
                                     $canceled_time = $row['canceled_time'];
-                                    if(!empty($canceled_time)){
+                                    if (!empty($canceled_time)) {
                                         ?>
                                         <tr>
                                             <td>Cancelled</td>
                                             <td>
-                                            <?php 
-                                            $newDate = date("Y/m/d H:iA", strtotime($canceled_time));
-                                            echo $newDate ?>    </td>
+                                                <?php
+                                                $newDate = date("Y/m/d H:iA", strtotime($canceled_time));
+                                                echo $newDate ?>
+                                            </td>
                                             <td>Administrator</td>
                                         </tr>
-                                        
+
                                         <?php
-                                        
+
                                     }
-                                    
-                                    
+
                                     while ($bidRow = mysqli_fetch_assoc($bidResult)) { ?>
                                         <tr>
                                             <td>
@@ -226,7 +238,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             </td>
                                         </tr>
                                     <?php } ?>
-                                </td>
+                                </tbody>
                             </table>
 
                         <?php } ?>
