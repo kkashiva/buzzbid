@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
     ItemFilter6(item_ID,current_bid,user_name) AS
     (SELECT ib.item_ID, ib.bid_amount current_bid, ib.bid_by user_name FROM ItemBid ib INNER JOIN
     ItemHighestBid ihb
-    ON ib.item_ID=ihb.item_ID
+    ON ib.item_ID=ihb.item_ID AND bid_amount=max_bid
     WHERE ib.item_ID IN (SELECT item_ID FROM ItemFilter5))
     SELECT i.item_ID, i.item_name, a.getit_now_price,a.scheduled_end_time
     auction_end_time,hb.current_bid,hb.user_name,a.actual_end_time
