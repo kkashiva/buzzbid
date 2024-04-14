@@ -40,13 +40,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // If there are no errors, proceed with registration
     if (empty($firstNameError) && empty($lastNameError) && empty($usernameError) && empty($passwordError) && empty($confirmPasswordError)) {
-        // Hash the password
+        // Check if the username already exists
+		$checkQuery = "SELECT user_name FROM User WHERE user_name = '$username'";
+		$result = mysqli_query($db, $checkQuery);
+		if (mysqli_num_rows($result) > 0) {
+			$usernameError = 'This username already exists. Please choose another one.';
+		} else {
+        // Hash the password using a secure method
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+		// Hash the password
         $hashedPassword = $password;
 
         // Insert user data into the database
         $insertQuery = "INSERT INTO User (first_name, last_name, user_name, password) 
                         VALUES ('$firstName', '$lastName', '$username', '$hashedPassword')";
-
+		}
         if (mysqli_query($db, $insertQuery)) {
             // Registration successful
             header("Location: login.php");
