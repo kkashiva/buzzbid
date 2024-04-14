@@ -1,5 +1,5 @@
 <?php
-include('lib/common.php');
+include ('lib/common.php');
 
 // SQL query to fetch data from the table
 $query = "SELECT
@@ -10,7 +10,7 @@ $query = "SELECT
 FROM Auction a
 INNER JOIN Item i ON a.item_ID = i.item_ID
 WHERE a.canceled_time IS NOT NULL
-ORDER BY i.item_ID DESC"; 
+ORDER BY i.item_ID DESC";
 
 // Perform the query
 $result = mysqli_query($db, $query);
@@ -21,14 +21,15 @@ if (!$result) {
 }
 ?>
 
-<?php include("lib/header.php"); ?>
+<?php include ("lib/header.php"); ?>
 <title>Cancelled Auction Details</title>
 </head>
+
 <body>
     <div class="cancelled-report-box">
         <span class="close" id="closeButton">&#10006;</span> <!-- Close symbol -->
         <div class="login-text">Cancelled Auction Details</div>
-        
+
         <!-- Display table result -->
         <div>
             <?php if (mysqli_num_rows($result) == 0) {
@@ -41,11 +42,16 @@ if (!$result) {
                         <th>Cancelled Date</th>
                         <th>Reason</th>
                     </tr>
-                    <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                    <?php while ($row = mysqli_fetch_assoc($result)) {
+
+                        $date = $row['canceled_time'];
+                        $newDate = date("Y/m/d H:iA", strtotime($date));
+
+                        ?>
                         <tr>
                             <td><?php echo $row['item_id']; ?></td>
                             <td><?php echo $row['listed_by']; ?></td>
-                            <td><?php echo $row['canceled_time']; ?></td>
+                            <td><?php echo $newDate; ?></td>
                             <td><?php echo $row['cancelation_reason']; ?></td>
                         </tr>
                     <?php } ?>
@@ -53,15 +59,16 @@ if (!$result) {
             <?php } ?>
         </div>
     </div>
-	
-	<script>
+
+    <script>
         // JavaScript to handle the close button click
-        document.getElementById("closeButton").addEventListener("click", function() {
+        document.getElementById("closeButton").addEventListener("click", function () {
             window.location.href = "main_menu.php"; // Redirect to main_menu page
         });
     </script>
-	
+
 </body>
+
 </html>
 
 <?php

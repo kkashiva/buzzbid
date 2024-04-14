@@ -245,7 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                         <div class="form_group">
                             <?php $_SESSION['search_cache'] = true; ?>
                             <input type="button" value="Close"
-                                onclick="window.location.href='item_search_results.php'" />
+                                onclick="window.location.href='main_menu.php'" />
                         </div>
                 </div>
             </div>

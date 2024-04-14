@@ -48,9 +48,9 @@ if (!$result) {
                         <tr>
                             <td><?php echo $row['category_name']; ?></td>
                             <td><?php echo $row['TotalItems']; ?></td>
-                            <td><?php echo $row['MinPrice']; ?></td>
-                            <td><?php echo $row['MaxPrice']; ?></td>
-                            <td><?php echo $row['AveragePrice']; ?></td>
+                            <td><?php echo '$' . number_format($row['MinPrice'], 2); ?></td>
+                            <td><?php echo '$' . number_format($row['MaxPrice'], 2); ?></td>
+                            <td><?php echo '$' . number_format($row['AveragePrice'], 2); ?></td>
                         </tr>
                     <?php } ?>
                 </table>
