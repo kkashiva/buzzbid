@@ -1,22 +1,13 @@
 <?php
 include ('lib/common.php');
+include ('calc_winners.php');
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-if (isset($_SESSION['lastResultTime']) && !empty($_SESSION['lastResultTime'])) {
-    $lastResultTime = $_SESSION['lastResultTime'];
-    $currentTime = new DateTime();
-    $minutes = abs($currentTime->getTimestamp() - $lastResultTime->getTimestamp()) / 60;
-    //$minutes = 2;
-    if ($minutes >= 1) {
-        $_SESSION['caller'] = 'main_menu.php';
-        header("Location: calc_winners.php");
-    }
-} 
-
+calc_winner_results();
 // Fetch user information from session
 $username = $_SESSION['username'];
 $position = '';

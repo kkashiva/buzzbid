@@ -1,12 +1,13 @@
 <?php
 include ('lib/common.php');
+include('calc_winners.php');
 
 // Check if user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-
+calc_winner_results() ;
 $fromCache = !empty($_SESSION['search_cache']);
 
 // Check if form is submitted
