@@ -7,7 +7,6 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
-// echo"view out";
 // Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // echo "here : ".$_GET['itemID'];
@@ -24,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         item_ID = $itemID
         GROUP BY item_ID)
         SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price, b.max_bid,i.listed_by,
-        coalesce(a.actual_end_time,a.scheduled_end_time) auction_end_time, a.min_sale_price
+        a.scheduled_end_time auction_end_time,a.actual_end_time, a.min_sale_price
         FROM Item i
         INNER JOIN Auction a ON i.item_ID = a.item_ID
         LEFT JOIN ItemHighestBid b ON i.item_ID = b.item_ID
@@ -87,6 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                         <?php if (mysqli_num_rows($result) == 0) {
                         } else {
                             $row = mysqli_fetch_assoc($result);
+
+                            $actual_end_time = $row["actual_end_time"];
 
                             $userQuery = "SELECT u.user_name FROM User u 
                             INNER JOIN adminuser a ON u.user_name= a.user_name
@@ -173,9 +174,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             ?>
                                         </label></td>
                                     <td>
-                                        <?php if (!empty($getit_now_price)) { ?>
-                                            <input type="button" value="Get it Now!"
-                                                onclick="window.location.href='getit_now.php'"></input>
+                                        <?php if (!empty($getit_now_price) && $_SESSION['username'] != $listedBy && empty($actual_end_time)) { ?>
+                                            <input type="button" id="get_it_now_btn" onclick="getitnow()" value="Get it Now!"></input>
                                         <?php } ?>
                                     </td>
                                 </tr>
@@ -248,7 +248,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     onclick="window.location.href='cancel_item.php'" />
                             <? } ?>
                             <?php
-                            if ($_SESSION['username'] != $listedBy) {
+                            if ($_SESSION['username'] != $listedBy && empty($actual_end_time)) {
                                 ?>
                                 <input id="bid_btn" type="button" value="Bid On This Item"
                                     onclick="window.location.href='item_bid.php'" disabled=true />
@@ -280,7 +280,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             var url = 'update_description.php?itemID='+id+'&itemDesc='+desc;
             document.location.href = url;   
         });
-        
+
+        function getitnow() {
+            var id=document.getElementById("item_ID").value;
+            var price = <?php echo $getit_now_price ?>;
+            var url = 'get_it_now.php?itemID='+id+"&price="+price;
+            document.location.href = url;   
+        }
+
         function editDesc(){
             //alert("edit desc");
             var editDiv =document.getElementById("editDescDiv");
