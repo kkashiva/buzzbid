@@ -35,8 +35,8 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo "<tr>";
                     echo "<td>" . $row['item_ID'] . "</td>";
-                    echo "<td>" . $row['item_name'] . "</td>";
-                    echo "<td>" . $row['sale_price'] . "</td>";
+                    echo "<td><a href='item_auction_results.php?itemID=" . $row['item_ID'] . "'>" . $row['item_name'] . "</a></td>";
+                    echo "<td>$" . number_format($row['sale_price'], 2) . "</td>";
                     echo "<td>" . $row['winner'] . "</td>";
                     echo "<td>" . $row['actual_end_time'] . "</td>";
                     echo "</tr>";

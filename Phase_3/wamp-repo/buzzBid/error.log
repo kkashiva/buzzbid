@@ -1902,3 +1902,5 @@ Stack trace:
 [14-Apr-2024 06:14:13 America/Los_Angeles] PHP Notice:  Constant DB_PASS already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 58
 [14-Apr-2024 06:14:13 America/Los_Angeles] PHP Notice:  Constant DB_SCHEMA already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 59
 [14-Apr-2024 06:14:13 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 42
+[14-Apr-2024 07:19:14 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in /Applications/AMPPS/www/buzzBid/item_auction_results.php on line 153
+[14-Apr-2024 07:19:17 America/Los_Angeles] PHP Notice:  Undefined index: max_bid in /Applications/AMPPS/www/buzzBid/item_auction_results.php on line 153
