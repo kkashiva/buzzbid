@@ -82,7 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         <div id="main_container">
             <div class="center_content">
                 <div class="text_box">
-                    <form action="item_bid.php" method="post">
                         <?php if (mysqli_num_rows($result) == 0) {
                         } else {
                             $row = mysqli_fetch_assoc($result);
@@ -250,8 +249,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <?php
                             if ($_SESSION['username'] != $listedBy && empty($actual_end_time)) {
                                 ?>
-                                <input id="bid_btn" type="button" value="Bid On This Item"
-                                    onclick="window.location.href='item_bid.php'" disabled=true />
+                                <input id="bid_btn" type="button" value="Bid On This Item" onclick="bidnow()" disabled=true />
                             <?php } ?>
                         </div>
                 </div>
@@ -284,10 +282,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         function getitnow() {
             var id=document.getElementById("item_ID").value;
             var price = <?php echo $getit_now_price ?>;
-            var url = 'get_it_now.php?itemID='+id+"&price="+price;
+            var url = 'item_bid.php?itemID='+id+"&price="+price+"&is_getit_now=true";
             document.location.href = url;   
         }
-
+        function bidnow() {
+            var id=document.getElementById("item_ID").value;
+            var price = document.getElementById("new_bid").value;
+            var url = 'item_bid.php?itemID='+id+"&price="+price;
+            document.location.href = url;   
+        }
         function editDesc(){
             //alert("edit desc");
             var editDiv =document.getElementById("editDescDiv");
@@ -299,7 +302,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
         function validateBid(getit_now_price, minSalePrice, maxBid) {
             curBid = parseFloat(document.getElementById("new_bid").value);
-            if (!isNaN(curBid)) {
+            if (isNaN(parseFloat(curBid))) {
+                document.getElementById("bid_err_msg").innerHTML = "Invalid Bid amount";
+                document.getElementById("bid_btn").disabled = true;
+            }
+            else{
                 min_new_bid = (isNaN(maxBid) ? minSalePrice : maxBid) + 1.00;
                 if (curBid >= getit_now_price) {
                     document.getElementById("bid_err_msg").innerHTML = "Use Get it Now button for purchase ";
