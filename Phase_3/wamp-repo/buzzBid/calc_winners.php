@@ -10,6 +10,7 @@ if (!isset($_SESSION['username'])) {
 
 //$_SESSION['lastResultTime'] = $currentTime->format('Y-m-d H:i:s');
 
+
 $query =
     "SELECT i.item_ID FROM item i
         INNER JOIN auction a 
@@ -73,9 +74,10 @@ if (!$result) {
 
     $curTime = new DateTime();
     $_SESSION['lastResultTime'] = $curTime;
-    $caller = $_SESSION['caller'];
-    $url = 'Location: ' . empty($caller) ? 'main_menu.php' : $caller;
-    echo $url;
-    header($url);
-    exit();
-}
+
+    header('Location: main_menu.php');
+
+    // $caller = $_SESSION['caller'];
+    // $url = 'Location: ' . empty($caller) ? 'main_menu.php' : $caller;
+    // header($url);
+} 
