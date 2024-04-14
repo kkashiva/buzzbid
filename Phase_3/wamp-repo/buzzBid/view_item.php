@@ -186,9 +186,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <tr>
                                 <td><label>Auction Ends:</label></td>
                                 <td><label>
-                                        <?php $date = $row['auction_end_time'];
-                                        $newDate = date("Y/m/d H:iA", strtotime($date));
-                                        echo $newDate ?>
+                                        <?php 
+                                        echo date('Y:m:d h:i A', strtotime($row['auction_end_time'])) ?>
                                     </label></td>
                                 <td></td>
                             </tr>
@@ -211,9 +210,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             echo empty($bid_amount) ? '-' : '$' . $convNum ?>
                                         </td>
                                         <td>
-                                            <?php $date = $row['time_of_bid'];
-                                            $newDate = date("Y/m/d H:iA", strtotime($date));
-                                            echo $newDate ?>
+                                            <?php 
+                                            echo date('Y:m:d h:i A', strtotime($row['time_of_bid'])) ?>
                                         </td>
                                         <td>
                                             <?php echo $row['bid_by']; ?>

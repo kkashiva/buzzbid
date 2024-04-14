@@ -159,8 +159,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>Auction Ended:</label></td>
                                     <td><label>
                                             <?php $auction_end_time = $row['auction_end_time'];
-                                            $newDate = date("m/d/Y H:iA", strtotime($auction_end_time));
-                                            echo $newDate ?>
+                                            echo date('Y/m/d h:i A', strtotime($row['auction_end_time'])) ?>
                                         </label></td>
                                     <td></td>
                                 </tr>
@@ -211,8 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             <td>Cancelled</td>
                                             <td>
                                                 <?php
-                                                $newDate = date("Y/m/d H:iA", strtotime($canceled_time));
-                                                echo $newDate ?>
+                                                echo date('Y/m/d h:i A', strtotime($row['canceled_time'])) ?>
                                             </td>
                                             <td>Administrator</td>
                                         </tr>
@@ -230,8 +228,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             </td>
                                             <td>
                                                 <?php $date = $bidRow['time_of_bid'];
-                                                $newDate = date("Y/m/d H:iA", strtotime($date));
-                                                echo $newDate ?>
+                                                echo date('Y/m/d h:i A', strtotime($date)) ?>
                                             </td>
                                             <td>
                                                 <?php echo $bidRow['bid_by']; ?>

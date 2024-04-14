@@ -33,15 +33,12 @@
                 // loop through all auctions and display them
                 $result = mysqli_query($db, $query);
                 while ($row = mysqli_fetch_assoc($result)) {
-                $date = $row['actual_end_time'];
-                $newDate = date("Y/m/d H:iA", strtotime($date));
-
                 echo "<tr>";
                     echo "<td>" . $row['item_ID'] . "</td>";
                     echo "<td><a href='item_auction_results.php?itemID=" . $row['item_ID'] . "'>" . $row['item_name'] . "</a></td>";
                     echo "<td>$" . number_format($row['sale_price'], 2) . "</td>";
                     echo "<td>" . $row['winner'] . "</td>";
-                    echo "<td>" . $newDate . "</td>";
+                    echo "<td>" . date('Y/m/d h:i A', strtotime($row['actual_end_time'])) . "</td>";
                     echo "</tr>";
                 }
             ?>

@@ -77,7 +77,7 @@
             echo '<div><b>' . $row['rated_by'] . '</b></div>';
             echo '</div><div>';
             echo '<div>Date: </div>';
-            echo '<div><b>' . $row['rate_date_time'] . '</b></div>';
+            echo '<div><b>' . date('Y/m/d h:i A', strtotime($row['rate_date_time'])) . '</b></div>';
             echo '</div></div>';
             echo '<div class="stars">';
             // display empty and filled stars based on rating

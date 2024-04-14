@@ -162,9 +162,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
                                 echo empty($gPrice) ? '-' : '$' . $convNum ?>
                             </td>
                             <td>
-                                <?php $date = $row['auction_end_time'];
-                                $newDate = date("Y/m/d H:iA", strtotime($date));
-                                echo $newDate ?>
+                                <?php 
+                                echo date('Y/m/d h:i A', strtotime($row['auction_end_time'])) ?>
                             </td>
                         </tr>
                     <?php } ?>

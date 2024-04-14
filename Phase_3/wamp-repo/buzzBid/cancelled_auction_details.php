@@ -43,15 +43,11 @@ if (!$result) {
                         <th>Reason</th>
                     </tr>
                     <?php while ($row = mysqli_fetch_assoc($result)) {
-
-                        $date = $row['canceled_time'];
-                        $newDate = date("Y/m/d H:iA", strtotime($date));
-
-                        ?>
+                       ?>
                         <tr>
                             <td><?php echo $row['item_id']; ?></td>
                             <td><?php echo $row['listed_by']; ?></td>
-                            <td><?php echo $newDate; ?></td>
+                            <td><?php echo date('Y/m/d h:i A', strtotime($row['canceled_time'])); ?></td>
                             <td><?php echo $row['cancelation_reason']; ?></td>
                         </tr>
                     <?php } ?>
