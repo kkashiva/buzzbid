@@ -38,7 +38,7 @@ $adminPosition = ''; // Fetch admin position from database or session if user is
 $menuOptions = [
     ['label' => 'Search for Items', 'url' => 'item_search.php'],
     ['label' => 'List Item', 'url' => 'item_list.php'],
-    ['label' => 'View Auction Results', 'url' => 'view_auction_results.php']
+    ['label' => 'View Auction Results', 'url' => 'auction_results.php']
 ];
 
 if ($row1['position'] <> '') {

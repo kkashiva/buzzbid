@@ -10,7 +10,7 @@
     border-top-width: 25px; /* Increase the width of the top border */
 }
 
-.login-text, .item-list-text, .ratings-text {
+.login-text, .item-list-text, .ratings-text, .auction-results-text {
     position: absolute;
     top: -22px; /* Adjust to position the text on the top border */
     left: 0; /* Start from the left side of the border */
@@ -318,4 +318,21 @@
 
     #rating_comment textarea {
         height: 4em;
+    }
+
+    /* For the auction results page */
+    .auction-results-box {
+        width: 600px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 4px solid #2596be;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        border-top-width: 30px; 
+    }
+    
+    .auction-results-box table {
+        width: 100%; /* Make the table take up the full width of the div */
     }

@@ -42,7 +42,7 @@
         <h1></h1>
     </div>
     <div class="ratings-box">
-        <span class="close">&#10006;</span> <!-- Close symbol -->
+        <span class="close" onclick="window.location.href='main_menu.php'">&#10006;</span> <!-- Close symbol -->
         <div class="ratings-text">Item Ratings</div>
         <div class="ratings-row">
             <div>Item ID</div>
