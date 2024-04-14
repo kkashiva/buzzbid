@@ -18,7 +18,7 @@ function calc_winner_results()
     }
 
     $query =
-        "SELECT i.item_ID FROM item i
+        "SELECT i.item_ID, a.min_sale_price FROM item i
         INNER JOIN auction a 
         ON i.item_ID = a.item_ID
         WHERE a.scheduled_end_time <= now() AND a.actual_end_time IS NULL";
@@ -33,6 +33,7 @@ function calc_winner_results()
     } else {
         while ($row = mysqli_fetch_assoc($result)) {
             $itemId = $row["item_ID"];
+            $minSalePrice = $row["min_sale_price"];
             $maxBidQuery = "WITH MAX_BID(item_ID, max_bid) AS
             (SELECT item_ID, max(bid_amount)
             FROM ItemBid
@@ -54,22 +55,29 @@ function calc_winner_results()
                 SET actual_end_time = now()
                 WHERE item_id=$itemId;";
 
-                // echo $endAuctionQuery;
-
                 $endAuctionResult = mysqli_query($db, $endAuctionQuery);
                 if (!$result) {
                     die("Error updating auction results with no bids: " . mysqli_error($db));
                 }
             } else {
+
                 $maxBidRow = mysqli_fetch_assoc($maxBidResult);
-                $maxBid = $maxBidRow["max_bid"];
-                $bidBy = $maxBidRow["bid_by"];
-
-                $auctionWinnerQuery = "UPDATE Auction
-                SET sale_price=$maxBid, winner = '$bidBy', actual_end_time = now()
-                WHERE item_id=$itemId;";
-
-                //echo $auctionWinnerQuery;
+                $salePrice = $maxBidRow["max_bid"];
+                $winner = $maxBidRow["bid_by"];
+                //handle bid< min sale price
+                if ($salePrice < $minSalePrice) {
+                    $auctionWinnerQuery = "UPDATE Auction
+                    SET sale_price=null,
+                     winner = null,
+                      actual_end_time = now()
+                    WHERE item_id=$itemId";
+                } else {
+                    $auctionWinnerQuery = "UPDATE Auction
+                    SET sale_price=$salePrice,
+                    winner = '$winner',
+                    actual_end_time = now()
+                    WHERE item_id=$itemId";
+                }
                 $auctionWinnerResult = mysqli_query($db, $auctionWinnerQuery);
 
                 if (!$auctionWinnerResult) {

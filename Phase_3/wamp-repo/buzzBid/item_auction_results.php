@@ -150,7 +150,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                             echo empty($getit_now_price) ? '-' : '$' . $convNum;
                                             //for future use
                                             $maxBid = $row['max_bid'];
-                                            $minSalePrice = $row['min_sale_price'];
                                             ?>
                                         </label></td>
                                     <td></td>
