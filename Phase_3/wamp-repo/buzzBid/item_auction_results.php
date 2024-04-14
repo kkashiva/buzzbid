@@ -103,7 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <td><label>
                                             <?php echo $row['item_ID']; ?>
                                         </label></td>
-                                    <td><a href="ratings_view.php">View Ratings</a></td>
+                                    <td><a href="ratings_view.php?itemID=<?php echo $row['item_ID']; ?>">View Ratings</a></td>
+                                    <!-- Append itemID url parameter to View Ratings link -->
                                 </tr>
                                 <tr>
                                     <td> <label>Item Name</label></td>

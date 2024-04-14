@@ -108,7 +108,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     </label>
                                     <input type="hidden" id="item_ID" value=<?php echo $row['item_ID']; ?>></input>
                                 </td>
-                                <td><a href="ratings_view.php">View Ratings</a></td>
+                                <td><a href="ratings_view.php?itemID=<?php echo $row['item_ID']; ?>">View Ratings</a></td>
+                                <!-- Append itemID url parameter to View Ratings link -->
+                            </tr>
                             </tr>
                             <tr>
                                 <td> <label>Item Name</label></td>
