@@ -185,7 +185,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="form-row price">
                 <label for="getItNowPrice">Get it now price $</label>
-                <input type="number" id="getItNowPrice" name="getItNowPrice" step="0.01" min="0"><br>
+                <input type="number" id="getItNowPrice" name="getItNowPrice" step="0.01" min="0"> (Optional)<br>
             </div>
             <div class="form-row checkbox">
                 <label for="returnsAccepted">Returns accepted</label>

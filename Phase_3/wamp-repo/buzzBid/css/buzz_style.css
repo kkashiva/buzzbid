@@ -353,3 +353,32 @@
     #cancel_reason textarea {
         height: 4em;
     }
+
+    /*For the Item Search Results page*/
+    .search-result-box {
+        width: 800px; 
+        margin: 0 auto;
+        padding: 20px;
+        border: 4px solid #2596be;
+        border-radius: 5px;
+        background-color: #FFFFFF;
+        position: relative;
+        text-align: center;
+        border-top-width: 30px; 
+    }
+
+    .search-result-box table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .search-result-box th, .search-result-box td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    .search-result-box th {
+        background-color: #FFFFFF;
+        font-weight: bold;
+        text-decoration: underline;
+    }

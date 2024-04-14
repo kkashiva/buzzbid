@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $fromCache) {
 </head>
 
 <body>
-    <div class="category-report-box">
+    <div class="search-result-box">
         <span class="close" id="closeButton">&#10006;</span> <!-- Close symbol -->
         <div class="login-text">Search Results</div>
 
