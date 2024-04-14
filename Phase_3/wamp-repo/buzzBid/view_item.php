@@ -245,6 +245,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 ?>
                                 <input type="button" value="Cancel This Item"
                                     onclick="window.location.href='cancel_item.php?itemID=<?php echo $row['item_ID']; ?>'" />
+                                    <!-- appended itemID URL parameter-->
                             <? } ?>
                             <?php
                             if ($_SESSION['username'] != $listedBy && empty($actual_end_time)) {

@@ -1785,3 +1785,39 @@ Stack trace:
 [14-Apr-2024 01:28:39 America/Los_Angeles] PHP Notice:  Undefined index: itemID in /Applications/AMPPS/www/buzzBid/cancel_item.php on line 4
 [14-Apr-2024 01:28:42 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 51
 [14-Apr-2024 01:28:42 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 51
+[14-Apr-2024 03:33:00 America/Los_Angeles] PHP Notice:  Undefined index: itemID in /Applications/AMPPS/www/buzzBid/cancel_item.php on line 4
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant SEPARATOR already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 36
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant NEWLINE already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 44
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant REFRESH_TIME already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 45
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_HOST already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 55
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_PORT already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 56
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_USER already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 57
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_PASS already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 58
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_SCHEMA already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 59
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant SEPARATOR already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 36
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant NEWLINE already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 44
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant REFRESH_TIME already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 45
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_HOST already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 55
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_PORT already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 56
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_USER already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 57
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_PASS already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 58
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Constant DB_SCHEMA already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 59
+[14-Apr-2024 03:33:02 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 42
+[14-Apr-2024 03:33:51 America/Los_Angeles] PHP Notice:  Undefined index: itemID in /Applications/AMPPS/www/buzzBid/cancel_item.php on line 4
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant SEPARATOR already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 36
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant NEWLINE already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 44
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant REFRESH_TIME already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 45
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_HOST already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 55
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_PORT already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 56
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_USER already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 57
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_PASS already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 58
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_SCHEMA already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 59
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant SEPARATOR already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 36
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant NEWLINE already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 44
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant REFRESH_TIME already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 45
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_HOST already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 55
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_PORT already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 56
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_USER already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 57
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_PASS already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 58
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Constant DB_SCHEMA already defined in /Applications/AMPPS/www/buzzBid/lib/common.php on line 59
+[14-Apr-2024 03:33:53 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 42
