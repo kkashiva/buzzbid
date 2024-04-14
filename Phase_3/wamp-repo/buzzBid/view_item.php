@@ -244,7 +244,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             <?php if ($isAdminUser) {
                                 ?>
                                 <input type="button" value="Cancel This Item"
-                                    onclick="window.location.href='cancel_item.php'" />
+                                    onclick="window.location.href='cancel_item.php?itemID=<?php echo $row['item_ID']; ?>'" />
                             <? } ?>
                             <?php
                             if ($_SESSION['username'] != $listedBy && empty($actual_end_time)) {

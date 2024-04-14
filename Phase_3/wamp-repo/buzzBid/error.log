@@ -1782,3 +1782,6 @@ Stack trace:
 [13-Apr-2024 20:02:36 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 44
 [13-Apr-2024 20:02:39 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 44
 [13-Apr-2024 20:02:52 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 44
+[14-Apr-2024 01:28:39 America/Los_Angeles] PHP Notice:  Undefined index: itemID in /Applications/AMPPS/www/buzzBid/cancel_item.php on line 4
+[14-Apr-2024 01:28:42 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 51
+[14-Apr-2024 01:28:42 America/Los_Angeles] PHP Notice:  Trying to access array offset on value of type null in /Applications/AMPPS/www/buzzBid/main_menu.php on line 51
