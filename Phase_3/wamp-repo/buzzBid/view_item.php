@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         item_ID = $itemID
         GROUP BY item_ID)
         SELECT i.item_ID, item_name, description, category, item_condition, returnable, getit_now_price, b.max_bid,i.listed_by,
-        a.scheduled_end_time auction_end_time,a.actual_end_time, a.starting_bid
+        a.scheduled_end_time auction_end_time,a.actual_end_time, a.starting_bid, a.canceled_time
         FROM Item i
         INNER JOIN Auction a ON i.item_ID = a.item_ID
         LEFT JOIN ItemHighestBid b ON i.item_ID = b.item_ID
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
                         $userQuery = "SELECT u.user_name FROM User u 
                             INNER JOIN adminuser a ON u.user_name= a.user_name
-                            WHERE u.user_name=";
+                            WHERE u.user_name=$listedBy";
 
                         $userResult = mysqli_query($db, $bidsQuery);
 
@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             die("Error fetching user details: " . mysqli_error($db));
                         }
                         $userRow = mysqli_fetch_assoc($userResult);
-                        $isAdminUser = mysqli_num_rows($result) != 0;
+                        $isAdminUser = mysqli_num_rows($userResult) != 0;
                         ?>
                         <table id="desc_table">
                             <tr>
@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     </input></td>
                                 <td>
                                     <?php
-                                    $listedBy = $row['listed_by'];
+                                    $listedBy = mysqli_real_escape_string($db, $row['listed_by']);
                                     if ($_SESSION['username'] == $listedBy) {
                                         ?>
                                         <div id="saveDescDiv">
@@ -174,6 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                         //for future use
                                         $maxBid = $row['max_bid'];
                                         $startingBid = $row['starting_bid'];
+                                        $isCanceled = !empty($row['canceled_time']);
                                         ?>
                                     </label></td>
                                 <td>
@@ -202,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                     <th>Time of Bid</th>
                                     <th>Username</th>
                                 </tr>
-                                <?php while ($row = mysqli_fetch_assoc($bidResult)) { ?>
+                                <?php while (!$isCanceled && $row = mysqli_fetch_assoc($bidResult)) { ?>
                                     <tr>
                                         <td>
                                             <?php $bid_amount = $row['bid_amount'];
@@ -221,7 +222,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                             </td>
                         </table>
 
-
+                        <?php if(!$isCanceled) { ?>          
                         <table id="desc_table">
                             <tr>
                                 <td> <label for="new_bid">Your bid</label></td>
@@ -239,7 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                                 <td><label id="bid_err_msg"></label></td>
                             </tr>
                         </table>
-                    <?php } ?>
+                    <?php } } ?>
                     <div class="form_group">
                         <?php $_SESSION['search_cache'] = true; ?>
                         <input type="button" value="Close" onclick="window.location.href='item_search_results.php'" />

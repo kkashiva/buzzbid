@@ -42,7 +42,7 @@ function calc_winner_results()
             SELECT bid_by, i.item_ID, max_bid
             FROM ItemBid i
             INNER JOIN MAX_BID m
-            ON i.item_ID = m.item_ID;";
+            ON i.item_ID = m.item_ID";
 
             $maxBidResult = mysqli_query($db, $maxBidQuery);
 
@@ -63,7 +63,7 @@ function calc_winner_results()
 
                 $maxBidRow = mysqli_fetch_assoc($maxBidResult);
                 $salePrice = $maxBidRow["max_bid"];
-                $winner = $maxBidRow["bid_by"];
+                $winner = mysqli_real_escape_string($db, $maxBidRow["bid_by"]);
                 //handle bid< min sale price
                 if ($salePrice < $minSalePrice) {
                     $auctionWinnerQuery = "UPDATE Auction
@@ -81,7 +81,7 @@ function calc_winner_results()
                 $auctionWinnerResult = mysqli_query($db, $auctionWinnerQuery);
 
                 if (!$auctionWinnerResult) {
-                    die("Error updating auction winner" . mysqli_error($db));
+                    die("Error updating auction winner: " . mysqli_error($db));
                 }
             }
         }

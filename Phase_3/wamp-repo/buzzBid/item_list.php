@@ -10,14 +10,14 @@ $auctionEnds = $returnsAccepted = 0;
 // check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve form data
-    $itemName = $_POST['itemName'];
-    $description = $_POST['description'];
-    $category = $_POST['category'];
-    $condition = $_POST['condition'];
-    $startBid = $_POST['startBid'];
-    $minSalePrice = $_POST['minSalePrice'];
-    $auctionEnds = $_POST['auctionEnds'];
-    $getItNowPrice = $_POST['getItNowPrice'];
+    $itemName = mysqli_real_escape_string($db, $_POST['itemName']);
+    $description = mysqli_real_escape_string($db, $_POST['description']);
+    $category = mysqli_real_escape_string($db, $_POST['category']);
+    $condition = mysqli_real_escape_string($db, $_POST['condition']);
+    $startBid = mysqli_real_escape_string($db, $_POST['startBid']);
+    $minSalePrice = mysqli_real_escape_string($db, $_POST['minSalePrice']);
+    $auctionEnds = mysqli_real_escape_string($db, $_POST['auctionEnds']);
+    $getItNowPrice = mysqli_real_escape_string($db, $_POST['getItNowPrice']);
     if ($getItNowPrice === '') {
         $getItNowPrice = NULL;
     }
