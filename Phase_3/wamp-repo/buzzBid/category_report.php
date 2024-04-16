@@ -12,7 +12,8 @@ FROM Category c
 LEFT JOIN Item i ON c.category_name = i.category
 LEFT JOIN Auction a ON i.item_id = a.item_id
 WHERE a.canceled_time IS NULL
-GROUP BY c.category_name"; 
+GROUP BY c.category_name
+ORDER BY c.category_name"; 
 
 // Perform the query
 $result = mysqli_query($db, $query);
