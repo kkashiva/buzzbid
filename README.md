@@ -240,8 +240,7 @@ The diagram is included in this repository.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/kkashiva/cs6400-2024-01-Team055.git
-cd cs6400-2024-01-Team055
+git clone https://github.com/kkashiva/buzzbid.git
 ```
 
 ## 2. Setup the database
