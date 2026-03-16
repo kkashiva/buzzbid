@@ -242,3 +242,53 @@ The diagram is included in this repository.
 ```bash
 git clone https://github.com/kkashiva/cs6400-2024-01-Team055.git
 cd cs6400-2024-01-Team055
+```
+
+## 2. Setup the database
+
+Create a MySQL database and import the schema.
+
+Example:
+```bash
+CREATE DATABASE buzzbid;
+USE buzzbid;
+SOURCE schema.sql;
+```
+
+## 3. Configure database connection
+
+Update database credentials in the PHP configuration file.
+
+Example:
+```bash
+$db_host = "localhost";
+$db_user = "root";
+$db_pass = "password";
+$db_name = "buzzbid";
+```
+
+## 4. Start a local server
+
+You can run the project using:
+-	Apache
+- XAMPP
+- MAMP
+- PHP built-in server
+
+```bash
+php -S localhost:8000
+```
+
+Then open:
+```bash
+http://localhost:8000
+```
+
+# Learning Objectives
+
+This project focused on:
+- Relational database design
+- EER modeling
+- SQL aggregation and reporting
+- Transaction logic
+- Full-stack web development with PHP and MySQL
