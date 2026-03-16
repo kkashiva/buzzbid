@@ -63,6 +63,11 @@ Administrative users have additional capabilities:
 
 Administrative privileges are assigned directly in the database.
 
+![Login Screen](Phase_2/login_screen.png)
+![Main Menu](Phase_2/main_menu.png)
+![New User Rsgistration](Phase_2/new_user_registration.png)
+
+
 ---
 
 ## Item Listings
@@ -80,6 +85,8 @@ Users can create auction listings with:
 
 Each item receives a unique **Item ID** generated automatically by the system.
 
+![Item Auction Listing](Phase_2/new_item_auction.png)
+
 ---
 
 ## Bidding System
@@ -94,6 +101,8 @@ Rules implemented:
 - Auctions close when:
   - The auction duration expires, or
   - A user purchases using **Get It Now**
+ 
+![Item Bidding](Phase_2/item_description_bidding.png)
 
 ---
 
@@ -107,6 +116,8 @@ Users can search listings using multiple filters:
 - Maximum price
 - Minimum item condition
 
+![Item Search](Phase_2/item_search.png)
+
 Search results include:
 
 - Item ID
@@ -118,6 +129,8 @@ Search results include:
 
 Results are sorted by **auction end time**.
 
+![Search Results](Phase_2/item_search_results.png)
+
 ---
 
 ## Ratings System
@@ -128,12 +141,16 @@ After winning an auction, users can rate items:
 - Optional written comment
 - Users may rate a listing only once
 
+![Item Ratings Submit](Phase_2/item_ratings_submit.png)
+
 The system also calculates:
 
 - Average rating per item name
 - Historical ratings across identical item names
 
 Administrators can remove inappropriate ratings.
+
+![Item Ratings View](Phase_2/item_ratings_view.png)
 
 ---
 
@@ -158,6 +175,8 @@ When auctions end, the system determines outcomes using the following logic:
 - Winner listed as **Cancelled**
 - Cancellation reason stored in the database
 
+![Auction Results](Phase_2/auction_results.png)
+
 ---
 
 # Administrative Reports
@@ -173,6 +192,8 @@ Aggregates items by category:
 - Maximum price
 - Average price
 
+![Category Report](Phase_2/category_report.png)
+
 ---
 
 ## User Report
@@ -185,6 +206,8 @@ Provides statistics per user:
 - Items rated
 - Most common listing condition
 
+![Users Report](Phase_2/user_report.png)
+
 ---
 
 ## Top Rated Items
@@ -193,6 +216,8 @@ Displays the **top 10 highest rated items**, sorted by:
 
 1. Average rating (descending)
 2. Item name (ascending)
+
+![Top Rated Items Report](Phase_2/top_rated_items_report.png)
 
 ---
 
@@ -206,6 +231,8 @@ Summary metrics including:
 - Cancelled auctions
 - Rated items
 - Unrated items
+
+![Category Report](Phase_2/category_report.png)
 
 ---
 
